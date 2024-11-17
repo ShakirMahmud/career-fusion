@@ -1,26 +1,32 @@
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
     const [isClicked, setIsClicked] = useState(true);
+    const navigate = useNavigate();
 
-    const { createNewUser, setUser } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
     const handleSubmit =(e)=>{
         e.preventDefault();
         const form = new FormData(e.target);
         const name = form.get('name');
-        const photoURL = form.get('photoURL');
+        const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, email,photoURL, password);
+        console.log(name, email, photo, password);
         createNewUser(email, password)
         .then(res =>{
             setUser(res.user);
             console.log(res.user);
-            
+            updateUserProfile({ displayName: name, photoURL: photo})
+            .then(res =>{
+                navigate('/');
+            }).catch(err =>{
+                console.error(err.code);
+            })
         })
         .catch(err =>{
             console.error(err.code);
@@ -38,7 +44,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text">Photo-URL</span>
                         </label>
-                        <input type="text" name='photoURL' placeholder="your photo-url" className="input rounded-xl input-bordered" required />
+                        <input type="text" name='photo' placeholder="your photo-url" className="input rounded-xl input-bordered" required />
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>

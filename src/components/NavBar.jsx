@@ -12,13 +12,20 @@ const NavBar = () => {
             <ul className='flex justify-center w-80 gap-4'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/pricing'>Pricing</NavLink>
-                <NavLink to='/profile'>My Profile</NavLink>
+                {
+                    user && <NavLink to='/profile'>My Profile</NavLink>
+                }
             </ul>
             <div className='w-80 flex justify-center'>
                 {
-                    user ? <Link onClick={logOut}  className='btn btn-neutral '>Logout</Link> : <Link to='/auth/login' className='btn btn-neutral '>Login</Link>
+                    user && user?.email ? 
+                    <div className='flex gap-3 items-center justify-center'>
+                        <img className='w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName}/>
+                        <Link onClick={logOut}  className='btn btn-neutral '>Logout</Link>
+                    </div> 
+                    :
+                     <Link to='/auth/login' className='btn btn-neutral '>Login</Link>
                 }
-                
             </div>
         </div>
     );
