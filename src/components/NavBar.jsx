@@ -6,6 +6,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const NavBar = () => {
     const navigate = useNavigate();
     const { user, logOut } = useContext(AuthContext);
+   
     return (
         <div className='w-11/12 mx-auto my-3 bg-base-200 rounded-xl flex justify-between items-center'>
             <img onClick={() => navigate('/')} className='w-80 hover:cursor-pointer object-cover' src={logo} alt="" />

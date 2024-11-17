@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
-    const { userLogin, setUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -16,6 +17,19 @@ const Login = () => {
             .then(res => {
                 setUser(res.user)
                 console.log(res.user)
+                navigate('/');
+            })
+            .catch(err => {
+                console.error(err.code);
+            })
+    }
+
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user)
+                navigate('/');
             })
             .catch(err => {
                 console.error(err.code);
@@ -52,6 +66,9 @@ const Login = () => {
                 <div className="text-center mt-6">
                     <span className="label-text">Don't have an account yet? </span>
                     <Link to='/auth/signUp' className="link link-hover">Sign Up</Link>
+                </div>
+                <div className="w-full flex  justify-center py-6">
+                    <button onClick={handleSignInWithGoogle} className="btn btn-ghost bg-base-300 rounded-lg text-lg">Log In with Google</button>
                 </div>
             </div>
         </div>

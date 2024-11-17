@@ -8,7 +8,7 @@ const SignUp = () => {
     const [isClicked, setIsClicked] = useState(true);
     const navigate = useNavigate();
 
-    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
     const handleSubmit =(e)=>{
         e.preventDefault();
         const form = new FormData(e.target);
@@ -31,6 +31,18 @@ const SignUp = () => {
         .catch(err =>{
             console.error(err.code);
         })
+    }
+
+    const handleSignUpWithGoogle = () => {
+        signInWithGoogle()
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user)
+                navigate('/');
+            })
+            .catch(err => {
+                console.error(err.code);
+            })
     }
     return (
         <div className='min-h-[80vh] flex justify-center items-center'>
@@ -73,6 +85,9 @@ const SignUp = () => {
                 <div className="text-center mt-6">
                     <span className="label-text">Don't have an account yet? </span>
                     <Link to='/auth/login' className="link link-hover">Log In</Link>
+                </div>
+                <div className="w-full flex  justify-center py-6">
+                    <button onClick={handleSignUpWithGoogle} className="btn btn-ghost bg-base-300 rounded-lg text-lg">Sign Up with Google</button>
                 </div>
             </div>
         </div>
