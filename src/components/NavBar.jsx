@@ -5,7 +5,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 const NavBar = () => {
     const navigate = useNavigate();
     return (
-        <div className='bg-base-200 rounded-xl flex justify-between items-center'>
+        <div className='w-11/12 mx-auto my-3 bg-base-200 rounded-xl flex justify-between items-center'>
             <img onClick={() => navigate('/')} className='w-80 hover:cursor-pointer object-cover' src={logo} alt="" />
             <ul className='flex justify-center w-80 gap-4'>
                 <NavLink to='/'>Home</NavLink>

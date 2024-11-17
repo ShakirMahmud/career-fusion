@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 const HomeLayout = () => {
     return (
         <div>
-            <header className="w-11/12 mx-auto my-3">
+            <header className="">
                 <NavBar></NavBar>
             </header>
             <main className="w-11/12 mx-auto my-6"><Outlet/></main>
