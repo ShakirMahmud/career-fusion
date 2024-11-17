@@ -7,19 +7,19 @@ const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
     const { userLogin, setUser } = useContext(AuthContext);
 
-    const handleLogin = e =>{
+    const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.target);
         const email = form.get('email');
         const password = form.get('password');
         userLogin(email, password)
-        .then(res =>{
-            setUser(res.user)
-            console.log(res.user)
-        })
-        .catch(err =>{
-            console.error(err.code);
-        })
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user)
+            })
+            .catch(err => {
+                console.error(err.code);
+            })
     }
     return (
         <div className='min-h-[80vh] flex justify-center items-center'>
@@ -46,7 +46,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button type='submit' className="btn btn-primary">Login</button>
                     </div>
                 </form>
                 <div className="text-center mt-6">
