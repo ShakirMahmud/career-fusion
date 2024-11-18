@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import { Outlet, useLocation } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const AuthLayout = () => {
     const location = useLocation();
@@ -22,6 +23,9 @@ const AuthLayout = () => {
             <div className={`${animation}`}>
                 <Outlet />
             </div>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     );
 };
