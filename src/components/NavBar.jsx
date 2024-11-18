@@ -37,8 +37,8 @@ const NavBar = () => {
                     {
                         user && user?.email ?
                             <div className='flex gap-3 items-center justify-center'>
-                                <div className='w-12 bg-card_bg rounded-full flex justify-center items-center '>
-                                    <img className='w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
+                                <div className='w-12 h-12 bg-card_bg rounded-full flex justify-center items-center '>
+                                    <img className='w-10 h-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
                                 </div>
                                 <Link onClick={logOut} className='btn btn-neutral bg-cyan-700 rounded-xl'>Logout</Link>
                             </div>

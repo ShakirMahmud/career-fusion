@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
+import ServiceTitle from "../components/ServiceTitle";
 
 const HomeLayout = () => {
     return (
@@ -17,7 +18,7 @@ const HomeLayout = () => {
                     <Banner/>
                 </section>
                 <section>
-                    service title
+                    <ServiceTitle/>
                 </section>
                 <Outlet />
             </main>

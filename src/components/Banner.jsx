@@ -18,7 +18,7 @@ const Banner = () => {
     }
   };
     return (
-        <div className="h-96"> {/* Adjust height as needed */}
+        <div className="h-[70vh]"> {/* Adjust height as needed */}
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -43,7 +43,7 @@ const Banner = () => {
                             loop
                             muted
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
                         <div className="absolute inset-0 flex items-center px-8 lg:px-20">
                             <div className="text-white space-y-4">
                                 <h2 className="text-4xl font-bold leading-snug">Unlock Your Potential with Expert Career Advice</h2>
@@ -66,7 +66,7 @@ const Banner = () => {
                             loop
                             muted
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
                         <div className="absolute inset-0 flex items-center px-8 lg:px-20">
                             <div className="text-white space-y-4">
                                 <h2 className="text-4xl font-bold leading-snug">Confident Resumes, Confident Futures</h2>
