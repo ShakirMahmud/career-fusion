@@ -1,24 +1,28 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 
 const HomeLayout = () => {
     return (
         <div>
-            <header className="">
-                <NavBar></NavBar>
+            <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
             </header>
             <main className="w-11/12 mx-auto my-6">
-            <section>
-                banner
-            </section>
-            <section>
-                service title
-            </section>
+                <section>
+                    <Banner/>
+                </section>
+                <section>
+                    service title
+                </section>
                 <Outlet />
             </main>
             <footer>
-                <Footer/>
+                <Footer />
             </footer>
         </div>
     );

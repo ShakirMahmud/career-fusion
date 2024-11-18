@@ -1,33 +1,64 @@
 import React, { useContext } from 'react';
 import logo from '../assets/logo.png'
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import gif from '../assets/Animation - 1731940087791.gif'
 
 const NavBar = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const { user, logOut } = useContext(AuthContext);
-   
+
     return (
-        <div className='w-11/12 mx-auto my-3 bg-base-200 rounded-xl flex justify-between items-center'>
-            <img onClick={() => navigate('/')} className='w-80 hover:cursor-pointer object-cover' src={logo} alt="" />
-            <ul className='flex justify-center w-80 gap-4'>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='/pricing'>Pricing</NavLink>
-                {
-                    user && <NavLink to='/profile'>My Profile</NavLink>
-                }
-            </ul>
-            <div className='w-80 flex justify-center'>
-                {
-                    user && user?.email ? 
-                    <div className='flex gap-3 items-center justify-center'>
-                        <img className='w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName}/>
-                        <Link onClick={logOut}  className='btn btn-neutral '>Logout</Link>
-                    </div> 
-                    :
-                     <Link to='/auth/login' className='btn btn-neutral '>Login</Link>
-                }
+        <div className='w-11/12 mx-auto '>
+            <div onClick={()=> navigate('/')} className=' pt-2 flex justify-between items-center'>
+                <div className="flex items-center gap-2 cursor-pointer">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-10 h-10 text-cyan-300 hover:scale-110 transition-transform duration-300"
+                    >
+                        <path d="M12 2L20 20H4L12 2Z" />
+                    </svg>
+                    <span className="text-cyan-400 font-semibold text-3xl tracking-wide">
+                        <span className='text-4xl'>C</span>areer<span className='text-4xl'>F</span>usion
+                    </span>
+                </div>
+
+                <ul className='flex justify-center w-80 gap-4'>
+                    <NavLink to='/'>Home</NavLink>
+                    <NavLink to='/pricing'>Pricing</NavLink>
+                    {
+                        user && <NavLink to='/profile'>My Profile</NavLink>
+                    }
+                </ul>
+                <div className='flex justify-center'>
+                    {
+                        user && user?.email ?
+                            <div className='flex gap-3 items-center justify-center'>
+                                <div className='w-12 bg-card_bg rounded-full flex justify-center items-center '>
+                                    <img className='w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
+                                </div>
+                                <Link onClick={logOut} className='btn btn-neutral bg-cyan-700 rounded-xl'>Logout</Link>
+                            </div>
+                            :
+                            <Link to='/auth/login' className='btn btn-neutral bg-cyan-700 rounded-xl'>Login</Link>
+                    }
+                </div>
             </div>
+            {
+                location.pathname === '/' && <div className='flex items-center justify-between'>
+                    <div>
+                        <h2 className="text-4xl font-semibold text-center my-4 w-4/5 mx-auto">
+                            "Empowering Your Career Journey with Expert Guidance"
+                        </h2>
+                    </div>
+                    <img src={gif} alt="" />
+                    <div></div>
+                </div>
+            }
+
         </div>
     );
 };

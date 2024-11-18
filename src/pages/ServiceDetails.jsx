@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const ServiceDetails = () => {
     const data = useLoaderData();
@@ -18,6 +19,7 @@ const ServiceDetails = () => {
         <div>
             <NavBar></NavBar>
             {selectedService.serviceName}
+            <Footer/>
         </div>
     );
 };
