@@ -1,5 +1,6 @@
 import React from 'react';
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 const ServiceCards = ({ service }) => {
   const { image, serviceName, category, description, pricing, duration, counselor, rating } = service;
@@ -40,9 +41,9 @@ const ServiceCards = ({ service }) => {
 
       {/* Learn More Button */}
       <div className="mt-6">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+        <Link to={`/service/${serviceName}`} className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
           Learn More
-        </button>
+        </Link>
       </div>
     </div>
   );

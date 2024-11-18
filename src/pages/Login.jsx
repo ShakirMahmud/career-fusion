@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
     const navigate = useNavigate();
+    const location = useLocation();
     const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = e => {
@@ -17,7 +18,7 @@ const Login = () => {
             .then(res => {
                 setUser(res.user)
                 console.log(res.user)
-                navigate('/');
+                navigate(location?.state ? location.state : '/');
             })
             .catch(err => {
                 console.error(err.code);
@@ -29,7 +30,7 @@ const Login = () => {
             .then(res => {
                 setUser(res.user)
                 console.log(res.user)
-                navigate('/');
+                navigate(location?.state ? location.state : '/');
             })
             .catch(err => {
                 console.error(err.code);
