@@ -4,209 +4,389 @@
     "image": "https://i.ibb.co/image1.jpg",
     "serviceName": "Career Counseling Sessions",
     "category": ["Online"],
-    "description": "One-on-one counseling sessions to help you plan your career goals effectively.",
+    "description": "One-on-one counseling sessions to help you plan your career goals effectively, explore career paths, set actionable goals, and develop strategies for long-term success. Whether you're at the start of your career journey or looking to make a career transition, these sessions offer personalized guidance tailored to your needs.",
     "price": "$120",
     "duration": "05-12-24 5-6 PM",
     "timeOfDay": "Evening",
     "counselor": "Dr. Emily Carter",
     "rating": 4.5,
     "type": "Individual",
-    "learnMore": "https://career-fusion.com/career-counseling"
+    "learnMore": "https://career-fusion.com/career-counseling",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Personalized career goal setting",
+      "Exploration of different career paths",
+      "Actionable steps for career growth"
+    ],
+    "skillsLearned": [
+      "Career planning",
+      "Goal setting techniques",
+      "Self-assessment and evaluation"
+    ],
+    "targetAudience": "Job seekers, career changers, recent graduates"
   },
   {
     "id": 2,
     "image": "https://i.ibb.co/image2.jpg",
     "serviceName": "Resume Review",
     "category": ["Online", "Group"],
-    "description": "Get your resume reviewed and tailored to match your dream job.",
+    "description": "Get your resume reviewed and tailored to match your dream job. Learn the most effective strategies to highlight your experience, skills, and achievements. With expert feedback, your resume will stand out to hiring managers and increase your chances of landing interviews.",
     "price": "$80",
     "duration": "06-12-24 3-4 PM",
     "timeOfDay": "Afternoon",
     "counselor": "Mr. Alex Johnson",
     "rating": 4.3,
     "type": "Workshop",
-    "learnMore": "https://career-fusion.com/resume-review"
+    "learnMore": "https://career-fusion.com/resume-review",
+    "location": "Online (via Google Meet)",
+    "serviceHighlights": [
+      "Detailed resume feedback",
+      "Custom suggestions for improvement",
+      "Insights into what hiring managers look for"
+    ],
+    "skillsLearned": [
+      "Resume formatting",
+      "Highlighting key skills and experiences",
+      "Writing powerful career summaries"
+    ],
+    "targetAudience": "Job seekers, professionals looking to update their resumes"
   },
   {
     "id": 3,
     "image": "https://i.ibb.co/image3.jpg",
     "serviceName": "Mock Group Interviews",
     "category": ["Offline", "Group"],
-    "description": "Participate in mock interviews to build confidence and improve performance.",
+    "description": "Participate in mock interviews to build confidence and improve performance. This interactive session simulates a real group interview environment, helping you practice answering questions, responding to group dynamics, and presenting yourself effectively in a team setting.",
     "price": "$100",
     "duration": "07-12-24 2-3:30 PM",
     "timeOfDay": "Afternoon",
     "counselor": "Ms. Sarah Lee",
     "rating": 4.9,
     "type": "Group",
-    "learnMore": "https://career-fusion.com/mock-interviews"
+    "learnMore": "https://career-fusion.com/mock-interviews",
+    "location": "On-site at Career Fusion Center",
+    "serviceHighlights": [
+      "Simulated group interview experience",
+      "Real-time feedback from experts",
+      "Practical group interview techniques"
+    ],
+    "skillsLearned": [
+      "Interviewing skills",
+      "Group communication strategies",
+      "Handling group interview dynamics"
+    ],
+    "targetAudience": "Job seekers preparing for group interviews, professionals applying to team-oriented roles"
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/image4.jpg",
     "serviceName": "Public Speaking Workshop",
     "category": ["Group"],
-    "description": "Enhance your public speaking skills with practical tips and exercises.",
+    "description": "Enhance your public speaking skills with practical tips and exercises. This workshop covers key aspects of effective communication, such as voice modulation, body language, storytelling techniques, and engaging your audience. Learn to overcome fear and deliver impactful presentations.",
     "price": "$150",
     "duration": "08-12-24 10 AM - 12 PM",
     "timeOfDay": "Morning",
     "counselor": "Mr. Liam Peterson",
     "rating": 4.7,
     "type": "Workshop",
-    "learnMore": "https://career-fusion.com/public-speaking"
+    "learnMore": "https://career-fusion.com/public-speaking",
+    "location": "On-site at Career Fusion Center",
+    "serviceHighlights": [
+      "Techniques for overcoming public speaking anxiety",
+      "Engaging your audience effectively",
+      "Practical speech crafting and delivery"
+    ],
+    "skillsLearned": [
+      "Public speaking techniques",
+      "Storytelling and engagement",
+      "Non-verbal communication skills"
+    ],
+    "targetAudience": "Professionals, students, or anyone looking to improve public speaking abilities"
   },
   {
     "id": 5,
     "image": "https://i.ibb.co/image5.jpg",
     "serviceName": "Time Management Skills",
     "category": ["Online"],
-    "description": "Learn effective time management techniques to boost productivity.",
+    "description": "Learn effective time management techniques to boost productivity and reduce stress. This session will teach you how to prioritize tasks, set achievable goals, and manage your schedule for optimal efficiency. Whether you are juggling multiple projects or struggling with procrastination, this session will equip you with the tools to succeed.",
     "price": "$130",
     "duration": "09-12-24 1-3 PM",
     "timeOfDay": "Afternoon",
     "counselor": "Ms. Olivia Green",
     "rating": 4.4,
     "type": "Individual",
-    "learnMore": "https://career-fusion.com/time-management"
+    "learnMore": "https://career-fusion.com/time-management",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Learn to prioritize tasks effectively",
+      "Time blocking and scheduling strategies",
+      "Procrastination management techniques"
+    ],
+    "skillsLearned": [
+      "Time management tools and techniques",
+      "Goal setting and task prioritization",
+      "Work-life balance strategies"
+    ],
+    "targetAudience": "Students, professionals, entrepreneurs, and anyone looking to improve their time management skills"
   },
   {
     "id": 6,
     "image": "https://i.ibb.co/image6.jpg",
     "serviceName": "Leadership Development",
     "category": ["Offline", "Group"],
-    "description": "Build leadership skills with interactive sessions and group activities.",
+    "description": "Build leadership skills with interactive sessions and group activities that focus on decision-making, conflict resolution, and team management. Participants will engage in role-playing exercises, case studies, and discussions designed to enhance their leadership abilities and prepare them for managerial roles.",
     "price": "$200",
     "duration": "10-12-24 9 AM - 12 PM",
     "timeOfDay": "Morning",
     "counselor": "Dr. Mia Adams",
     "rating": 4.1,
     "type": "Workshop",
-    "learnMore": "https://career-fusion.com/leadership-development"
+    "learnMore": "https://career-fusion.com/leadership-development",
+    "location": "On-site at Career Fusion Center",
+    "serviceHighlights": [
+      "Group activities focused on leadership skills",
+      "Conflict resolution and decision-making techniques",
+      "Real-world case studies and role-playing exercises"
+    ],
+    "skillsLearned": [
+      "Team management",
+      "Effective decision-making",
+      "Conflict resolution"
+    ],
+    "targetAudience": "Aspiring managers, team leaders, professionals seeking leadership roles"
   },
   {
     "id": 7,
     "image": "https://i.ibb.co/image2.jpg",
     "serviceName": "Stress Management Counseling",
     "category": ["Online", "Group"],
-    "description": "Explore techniques to manage stress and enhance mental well-being.",
+    "description": "Explore techniques to manage stress and enhance mental well-being. In this counseling session, participants will learn how to identify stressors, practice mindfulness, and develop coping strategies for both personal and professional challenges. The focus is on maintaining a healthy work-life balance while fostering emotional resilience.",
     "price": "$140",
     "duration": "11-12-24 4-5:30 PM",
     "timeOfDay": "Evening",
     "counselor": "Mr. Noah White",
     "rating": 4.2,
     "type": "Group",
-    "learnMore": "https://career-fusion.com/stress-management"
+    "learnMore": "https://career-fusion.com/stress-management",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Mindfulness and relaxation techniques",
+      "Coping mechanisms for stress management",
+      "Work-life balance tips"
+    ],
+    "skillsLearned": [
+      "Stress reduction techniques",
+      "Mindfulness and meditation practices",
+      "Emotional resilience building"
+    ],
+    "targetAudience": "Professionals, students, or anyone experiencing stress in their daily lives"
   },
   {
     "id": 8,
     "image": "https://i.ibb.co/image3.jpg",
     "serviceName": "Scholarship Application Help",
     "category": ["Online"],
-    "description": "Guidance on finding and applying for the best scholarships.",
+    "description": "Guidance on finding and applying for the best scholarships. This session covers scholarship search strategies, application writing tips, and how to present yourself as an ideal candidate for funding opportunities. Learn how to increase your chances of winning scholarships and funding for your education.",
     "price": "$100",
     "duration": "12-12-24 11 AM - 12 PM",
     "timeOfDay": "Morning",
-    "counselor": "Ms. Ava Taylor",
+    "counselor": "Ms. Kate Turner",
     "rating": 4.8,
-    "type": "Individual",
-    "learnMore": "https://career-fusion.com/scholarship-guidance"
+    "type": "Workshop",
+    "learnMore": "https://career-fusion.com/scholarship-application",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Expert tips on applying for scholarships",
+      "Strategies to enhance your application",
+      "Insight into scholarship opportunities"
+    ],
+    "skillsLearned": [
+      "Application writing skills",
+      "Researching scholarships",
+      "Effective personal statement crafting"
+    ],
+    "targetAudience": "Students, aspiring scholars, individuals looking for financial aid"
   },
   {
     "id": 9,
-    "image": "https://i.ibb.co/image4.jpg",
-    "serviceName": "Networking Masterclass",
-    "category": ["Offline", "Group"],
-    "description": "Master the art of networking with practical tips and exercises.",
-    "price": "$110",
-    "duration": "13-12-24 5-6:30 PM",
-    "timeOfDay": "Evening",
-    "counselor": "Mr. Mason Scott",
+    "image": "https://i.ibb.co/image5.jpg",
+    "serviceName": "Interview Coaching",
+    "category": ["Online", "Individual"],
+    "description": "Prepare for job interviews with personalized coaching. In this session, you will practice answering common interview questions, receive feedback on your answers, and refine your presentation skills. Learn how to create a lasting impression on your potential employer.",
+    "price": "$150",
+    "duration": "13-12-24 10 AM - 11:30 AM",
+    "timeOfDay": "Morning",
+    "counselor": "Dr. Mark Phillips",
     "rating": 4.6,
-    "type": "Workshop",
-    "learnMore": "https://career-fusion.com/networking-skills"
+    "type": "Individual",
+    "learnMore": "https://career-fusion.com/interview-coaching",
+    "location": "Online (via Skype)",
+    "serviceHighlights": [
+      "Tailored interview preparation",
+      "Real-time feedback on your responses",
+      "Techniques for managing interview anxiety"
+    ],
+    "skillsLearned": [
+      "Answering common interview questions",
+      "Handling difficult questions",
+      "Confidence-building techniques"
+    ],
+    "targetAudience": "Job seekers, individuals preparing for job interviews"
   },
   {
     "id": 10,
-    "image": "https://i.ibb.co/image5.jpg",
-    "serviceName": "Creative Problem Solving",
-    "category": ["Online", "Group"],
-    "description": "Learn how to tackle challenges creatively in group settings.",
-    "price": "$150",
-    "duration": "14-12-24 2-4 PM",
+    "image": "https://i.ibb.co/image7.jpg",
+    "serviceName": "Networking Strategies",
+    "category": ["Group", "Online"],
+    "description": "Learn effective networking strategies to expand your professional connections. This session focuses on building meaningful relationships, both online and offline, and provides techniques for leveraging networking to enhance career opportunities.",
+    "price": "$100",
+    "duration": "14-12-24 2-3 PM",
     "timeOfDay": "Afternoon",
-    "counselor": "Dr. Emily Carter",
-    "rating": 4.3,
-    "type": "Group",
-    "learnMore": "https://career-fusion.com/creative-solving"
+    "counselor": "Ms. Rachel Adams",
+    "rating": 4.5,
+    "type": "Workshop",
+    "learnMore": "https://career-fusion.com/networking-strategies",
+    "location": "Online (via LinkedIn Group)",
+    "serviceHighlights": [
+      "Effective online and offline networking techniques",
+      "Building long-term professional relationships",
+      "Leveraging social media for networking"
+    ],
+    "skillsLearned": [
+      "Networking basics",
+      "Using LinkedIn for career advancement",
+      "Making meaningful professional connections"
+    ],
+    "targetAudience": "Professionals, job seekers, entrepreneurs"
   },
   {
     "id": 11,
-    "image": "https://i.ibb.co/image6.jpg",
-    "serviceName": "Advanced Negotiation Skills",
-    "category": ["Offline"],
-    "description": "Master negotiation techniques for professional success.",
-    "price": "$180",
-    "duration": "15-12-24 11 AM - 1 PM",
-    "timeOfDay": "Morning",
-    "counselor": "Ms. Olivia Green",
-    "rating": 4.7,
+    "image": "https://i.ibb.co/image8.jpg",
+    "serviceName": "Salary Negotiation Coaching",
+    "category": ["Individual", "Online"],
+    "description": "Learn how to effectively negotiate your salary with this coaching session. Develop your negotiation skills, understand your worth, and learn strategies to ensure you're compensated fairly in your next job offer.",
+    "price": "$130",
+    "duration": "15-12-24 1-2 PM",
+    "timeOfDay": "Afternoon",
+    "counselor": "Ms. Emma Davis",
+    "rating": 4.6,
     "type": "Individual",
-    "learnMore": "https://career-fusion.com/negotiation-skills"
+    "learnMore": "https://career-fusion.com/salary-negotiation",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Negotiation strategies and techniques",
+      "Understanding your market value",
+      "Role-playing salary negotiations"
+    ],
+    "skillsLearned": [
+      "Negotiation tactics",
+      "Confidence in salary discussions",
+      "Researching salary ranges"
+    ],
+    "targetAudience": "Job seekers, professionals transitioning to new roles"
   },
   {
     "id": 12,
-    "image": "https://i.ibb.co/image3.jpg",
-    "serviceName": "Building Team Cohesion",
-    "category": ["Offline", "Group"],
-    "description": "Interactive workshop to strengthen team collaboration.",
-    "price": "$170",
-    "duration": "16-12-24 10 AM - 12 PM",
-    "timeOfDay": "Morning",
-    "counselor": "Dr. Mia Adams",
-    "rating": 4.9,
-    "type": "Workshop",
-    "learnMore": "https://career-fusion.com/team-cohesion"
+    "image": "https://i.ibb.co/image9.jpg",
+    "serviceName": "Entrepreneurship Mentoring",
+    "category": ["Online", "Individual"],
+    "description": "Mentoring sessions designed for aspiring entrepreneurs who are ready to take the leap. Get personalized advice on launching and growing a business, including creating business plans, raising funds, and scaling operations.",
+    "price": "$200",
+    "duration": "16-12-24 3-4:30 PM",
+    "timeOfDay": "Afternoon",
+    "counselor": "Mr. Daniel Moore",
+    "rating": 4.8,
+    "type": "Individual",
+    "learnMore": "https://career-fusion.com/entrepreneurship-mentoring",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Business plan creation",
+      "Fundraising strategies",
+      "Scaling your business operations"
+    ],
+    "skillsLearned": [
+      "Entrepreneurship fundamentals",
+      "Building a business model",
+      "Pitching to investors"
+    ],
+    "targetAudience": "Aspiring entrepreneurs, small business owners"
   },
   {
     "id": 13,
-    "image": "https://i.ibb.co/image2.jpg",
-    "serviceName": "Effective Communication Skills",
-    "category": ["Online"],
-    "description": "Learn techniques to communicate effectively in personal and professional settings.",
-    "price": "$90",
-    "duration": "17-12-24 4-5 PM",
-    "timeOfDay": "Evening",
-    "counselor": "Ms. Ava Taylor",
-    "rating": 4.2,
-    "type": "Individual",
-    "learnMore": "https://career-fusion.com/communication-skills"
+    "image": "https://i.ibb.co/image10.jpg",
+    "serviceName": "Conflict Resolution Skills",
+    "category": ["Offline", "Group"],
+    "description": "This workshop teaches conflict resolution techniques that help you navigate disagreements in the workplace or personal life. Learn how to manage conflict constructively, facilitate discussions, and build healthier relationships.",
+    "price": "$120",
+    "duration": "17-12-24 10 AM - 12 PM",
+    "timeOfDay": "Morning",
+    "counselor": "Ms. Julia Clark",
+    "rating": 4.4,
+    "type": "Workshop",
+    "learnMore": "https://career-fusion.com/conflict-resolution",
+    "location": "On-site at Career Fusion Center",
+    "serviceHighlights": [
+      "Handling difficult conversations",
+      "Creating win-win solutions",
+      "Strategies for de-escalation"
+    ],
+    "skillsLearned": [
+      "Conflict management techniques",
+      "Effective communication in conflict",
+      "Building trust through resolution"
+    ],
+    "targetAudience": "Managers, employees, anyone dealing with conflict"
   },
   {
     "id": 14,
-    "image": "https://i.ibb.co/image1.jpg",
-    "serviceName": "Emotional Intelligence Workshop",
-    "category": ["Online", "Group"],
-    "description": "Develop emotional intelligence through interactive group activities.",
-    "price": "$140",
-    "duration": "18-12-24 2-4 PM",
-    "timeOfDay": "Afternoon",
-    "counselor": "Mr. Noah White",
-    "rating": 4.1,
-    "type": "Workshop",
-    "learnMore": "https://career-fusion.com/emotional-intelligence"
+    "image": "https://i.ibb.co/image11.jpg",
+    "serviceName": "Personal Branding",
+    "category": ["Online", "Individual"],
+    "description": "Learn to build and promote your personal brand with this coaching session. Understand how to identify your unique strengths, develop your online presence, and communicate your value to employers and clients.",
+    "price": "$150",
+    "duration": "18-12-24 9-10 AM",
+    "timeOfDay": "Morning",
+    "counselor": "Ms. Hannah Wilson",
+    "rating": 4.7,
+    "type": "Individual",
+    "learnMore": "https://career-fusion.com/personal-branding",
+    "location": "Online (via Zoom)",
+    "serviceHighlights": [
+      "Building your unique value proposition",
+      "Leveraging social media for branding",
+      "Creating a standout online presence"
+    ],
+    "skillsLearned": [
+      "Branding strategies",
+      "Online presence management",
+      "Self-promotion techniques"
+    ],
+    "targetAudience": "Professionals, job seekers, entrepreneurs"
   },
   {
     "id": 15,
-    "image": "https://i.ibb.co/image6.jpg",
-    "serviceName": "Conflict Resolution Training",
-    "category": ["Offline", "Group"],
-    "description": "Learn practical conflict resolution skills in a group setting.",
-    "price": "$160",
-    "duration": "19-12-24 10 AM - 12 PM",
-    "timeOfDay": "Morning",
-    "counselor": "Mr. Mason Scott",
-    "rating": 4.8,
-    "type": "Group",
-    "learnMore": "https://career-fusion.com/conflict-resolution"
+    "image": "https://i.ibb.co/image12.jpg",
+    "serviceName": "Digital Marketing Fundamentals",
+    "category": ["Group", "Online"],
+    "description": "This course covers the basics of digital marketing, including SEO, social media strategies, content marketing, and email marketing. Perfect for anyone looking to learn how to build an online presence and attract an audience through digital platforms.",
+    "price": "$180",
+    "duration": "19-12-24 2-4 PM",
+    "timeOfDay": "Afternoon",
+    "counselor": "Mr. Ethan Brooks",
+    "rating": 4.9,
+    "type": "Workshop",
+    "learnMore": "https://career-fusion.com/digital-marketing",
+    "location": "Online (via Google Meet)",
+    "serviceHighlights": [
+      "Introduction to SEO and SEM",
+      "Social media marketing strategies",
+      "Effective email marketing techniques"
+    ],
+    "skillsLearned": [
+      "SEO and content marketing",
+      "Social media advertising",
+      "Building digital marketing campaigns"
+    ],
+    "targetAudience": "Small business owners, aspiring marketers, digital entrepreneurs"
   }
 ]
