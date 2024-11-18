@@ -11,8 +11,8 @@ const NavBar = () => {
 
     return (
         <div className='w-11/12 mx-auto '>
-            <div onClick={()=> navigate('/')} className=' pt-2 flex justify-between items-center'>
-                <div className="flex items-center gap-2 cursor-pointer">
+            <div  className=' pt-2 flex justify-between items-center'>
+                <div onClick={()=> navigate('/')} className="flex items-center gap-2 cursor-pointer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"

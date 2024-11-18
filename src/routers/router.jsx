@@ -8,6 +8,7 @@ import SignUp from "../pages/SignUp";
 import Services from "../pages/Services";
 import ServiceDetails from "../pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h3>404 Not Found</h3>
+    element: <ErrorPage/>
   }
 ]);
