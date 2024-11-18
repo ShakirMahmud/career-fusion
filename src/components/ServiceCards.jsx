@@ -3,7 +3,10 @@ import 'animate.css';
 import { Link } from 'react-router-dom';
 
 const ServiceCards = ({ service }) => {
-  const { image, serviceName, category, description, pricing, duration, counselor, rating } = service;
+  const { image, serviceName, category, description, price, duration, counselor, rating } = service;
+
+  // Ensure category is treated correctly if it's not an array
+  const categoryDisplay = Array.isArray(category) ? category.join(', ') : category;
 
   return (
     <div
@@ -21,13 +24,16 @@ const ServiceCards = ({ service }) => {
       {/* Service Info */}
       <div className="mt-4">
         <h3 className="text-xl font-bold text-blue-700">{serviceName}</h3>
-        <p className="text-sm text-gray-500 italic">{category}</p>
+        {/* Displaying Categories */}
+        <p className="text-sm text-gray-500 italic">
+          {categoryDisplay || 'N/A'}
+        </p>
         <p className="text-gray-600 mt-2">{description}</p>
       </div>
 
-      {/* Pricing and Counselor */}
+      {/* Price and Counselor */}
       <div className="mt-4 flex justify-between items-center">
-        <p className="text-lg font-semibold text-green-600">${pricing}</p>
+        <p className="text-lg font-semibold text-green-600">{price}</p>
         <p className="text-sm text-gray-500">By: <span className="font-medium text-blue-600">{counselor}</span></p>
       </div>
 
@@ -35,7 +41,7 @@ const ServiceCards = ({ service }) => {
       <div className="mt-2 flex justify-between items-center">
         <p className="text-sm text-gray-500">{duration}</p>
         <p className="flex items-center text-yellow-500">
-          {'★'.repeat(rating)} <span className="text-gray-500 ml-2">({rating})</span>
+          {'★'.repeat(Math.floor(rating))} <span className="text-gray-500 ml-2">({rating})</span>
         </p>
       </div>
 
