@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import ServiceCards from '../components/ServiceCards'; // Import ServiceCards component
-import Rating from 'react-rating'; // For dynamic star ratings
+
 
 const ServiceDetails = () => {
     const data = useLoaderData();
@@ -41,7 +40,7 @@ const ServiceDetails = () => {
                                     : 'hover:border-transparent group'
                                     } bg-white shadow-md transition-all duration-300`}
                             >
-                                <div className="overflow-hidden rounded-md h-40">
+                                <div className="overflow-hidden rounded-md h-48">
                                     <img
                                         src={service.image}
                                         alt={service.serviceName}
@@ -66,7 +65,7 @@ const ServiceDetails = () => {
                         <img
                             src={selectedService.image}
                             alt={selectedService.serviceName}
-                            className="mt-4 w-full h-60 object-cover rounded-lg"
+                            className="mt-4 w-full h-96 object-cover rounded-lg"
                         />
                         <p className="text-lg mt-4">{selectedService.description}</p>
 
@@ -79,12 +78,10 @@ const ServiceDetails = () => {
 
                         <div className="mt-4 flex justify-between items-center">
                             <p className="text-sm text-gray-500">{selectedService.duration}</p>
-                            <Rating
-                                initialRating={selectedService.rating}
-                                emptySymbol="far fa-star text-yellow-500"
-                                fullSymbol="fas fa-star text-yellow-500"
-                                readonly
-                            />
+                            {/* Use Rating Component */}
+                            <p className="flex items-center text-yellow-500">
+                                {'★'.repeat(Math.floor(selectedService.rating))} <span className="text-gray-500 ml-2">({selectedService.rating})</span>
+                            </p>
                         </div>
 
                         {/* New Information in Two Columns */}
@@ -121,18 +118,17 @@ const ServiceDetails = () => {
                         {/* Feedback Section */}
                         <div className="mt-8">
                             <h3 className="text-2xl font-semibold mb-4">Comments / Feedback</h3>
-                            <div className="">
-                                {comments.length > 0 ? (
-                                    <ul className="list-disc pl-6">
-                                        {comments.map((comment, index) => (
-                                            <li key={index} className="text-gray-700 mt-2">
-                                                {comment}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                ) : (
-                                    <p className="text-gray-500">No comments yet. Be the first to comment!</p>
-                                )}
+                            <div className="">{comments.length > 0 ? (
+                                <ul className="list-disc pl-6">
+                                    {comments.map((comment, index) => (
+                                        <li key={index} className="text-gray-700 mt-2">
+                                            {comment}
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-gray-500">No comments yet. Be the first to comment!</p>
+                            )}
                             </div>
                             <div className="flex items-center gap-4 mt-4">
                                 <input
@@ -153,7 +149,7 @@ const ServiceDetails = () => {
                         </div>
 
                         <div className="mt-6">
-                            <button onClick={()=> navigate('/')} className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors">
+                            <button onClick={() => navigate('/')} className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors">
                                 Back to Home
                             </button>
                         </div>

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/image1.jpg",
+    "image": "https://i.ibb.co.com/tPgQ0yz/Career-Counseling-Sessions.gif",
     "serviceName": "Career Counseling Sessions",
     "category": ["Online"],
     "description": "One-on-one counseling sessions to help you plan your career goals effectively, explore career paths, set actionable goals, and develop strategies for long-term success. Whether you're at the start of your career journey or looking to make a career transition, these sessions offer personalized guidance tailored to your needs.",
@@ -27,7 +27,7 @@
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/image2.jpg",
+    "image": "https://i.ibb.co.com/njgqkRh/Resume-Review.gif",
     "serviceName": "Resume Review",
     "category": ["Online", "Group"],
     "description": "Get your resume reviewed and tailored to match your dream job. Learn the most effective strategies to highlight your experience, skills, and achievements. With expert feedback, your resume will stand out to hiring managers and increase your chances of landing interviews.",
@@ -53,7 +53,7 @@
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/image3.jpg",
+    "image": "https://i.ibb.co.com/TRv5c6Z/Mock-Group-Interviews.gif",
     "serviceName": "Mock Group Interviews",
     "category": ["Offline", "Group"],
     "description": "Participate in mock interviews to build confidence and improve performance. This interactive session simulates a real group interview environment, helping you practice answering questions, responding to group dynamics, and presenting yourself effectively in a team setting.",
@@ -79,7 +79,7 @@
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/image4.jpg",
+    "image": "https://i.ibb.co.com/NW8BLdb/Public-Speaking-Workshop.gif",
     "serviceName": "Public Speaking Workshop",
     "category": ["Group"],
     "description": "Enhance your public speaking skills with practical tips and exercises. This workshop covers key aspects of effective communication, such as voice modulation, body language, storytelling techniques, and engaging your audience. Learn to overcome fear and deliver impactful presentations.",
@@ -105,7 +105,7 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/image5.jpg",
+    "image": "https://i.ibb.co.com/CwnZdd0/Time-Management-Skills.gif",
     "serviceName": "Time Management Skills",
     "category": ["Online"],
     "description": "Learn effective time management techniques to boost productivity and reduce stress. This session will teach you how to prioritize tasks, set achievable goals, and manage your schedule for optimal efficiency. Whether you are juggling multiple projects or struggling with procrastination, this session will equip you with the tools to succeed.",
@@ -131,7 +131,7 @@
   },
   {
     "id": 6,
-    "image": "https://i.ibb.co/image6.jpg",
+    "image": "https://i.ibb.co.com/xfCty6s/Leadership-Development.gif",
     "serviceName": "Leadership Development",
     "category": ["Offline", "Group"],
     "description": "Build leadership skills with interactive sessions and group activities that focus on decision-making, conflict resolution, and team management. Participants will engage in role-playing exercises, case studies, and discussions designed to enhance their leadership abilities and prepare them for managerial roles.",
@@ -157,7 +157,7 @@
   },
   {
     "id": 7,
-    "image": "https://i.ibb.co/image2.jpg",
+    "image": "https://i.ibb.co.com/KwgYFXq/Stress-Management-Counseling.gif",
     "serviceName": "Stress Management Counseling",
     "category": ["Online", "Group"],
     "description": "Explore techniques to manage stress and enhance mental well-being. In this counseling session, participants will learn how to identify stressors, practice mindfulness, and develop coping strategies for both personal and professional challenges. The focus is on maintaining a healthy work-life balance while fostering emotional resilience.",
@@ -183,7 +183,7 @@
   },
   {
     "id": 8,
-    "image": "https://i.ibb.co/image3.jpg",
+    "image": "https://i.ibb.co.com/wMm4bs9/Scholarship-Application-Help.gif",
     "serviceName": "Scholarship Application Help",
     "category": ["Online"],
     "description": "Guidance on finding and applying for the best scholarships. This session covers scholarship search strategies, application writing tips, and how to present yourself as an ideal candidate for funding opportunities. Learn how to increase your chances of winning scholarships and funding for your education.",
@@ -209,7 +209,7 @@
   },
   {
     "id": 9,
-    "image": "https://i.ibb.co/image5.jpg",
+    "image": "https://i.ibb.co.com/609TD6R/Interview-Coaching.gif",
     "serviceName": "Interview Coaching",
     "category": ["Online", "Individual"],
     "description": "Prepare for job interviews with personalized coaching. In this session, you will practice answering common interview questions, receive feedback on your answers, and refine your presentation skills. Learn how to create a lasting impression on your potential employer.",
@@ -235,7 +235,7 @@
   },
   {
     "id": 10,
-    "image": "https://i.ibb.co/image7.jpg",
+    "image": "https://i.ibb.co.com/18qY3Y3/Networking-Strategies.gif",
     "serviceName": "Networking Strategies",
     "category": ["Group", "Online"],
     "description": "Learn effective networking strategies to expand your professional connections. This session focuses on building meaningful relationships, both online and offline, and provides techniques for leveraging networking to enhance career opportunities.",
@@ -261,7 +261,7 @@
   },
   {
     "id": 11,
-    "image": "https://i.ibb.co/image8.jpg",
+    "image": "https://i.ibb.co.com/kqk5HPf/Salary-Negotiation-Coaching.gif",
     "serviceName": "Salary Negotiation Coaching",
     "category": ["Individual", "Online"],
     "description": "Learn how to effectively negotiate your salary with this coaching session. Develop your negotiation skills, understand your worth, and learn strategies to ensure you're compensated fairly in your next job offer.",
@@ -287,7 +287,7 @@
   },
   {
     "id": 12,
-    "image": "https://i.ibb.co/image9.jpg",
+    "image": "https://i.ibb.co.com/Mk4664R/Entrepreneurship-Mentoring.gif",
     "serviceName": "Entrepreneurship Mentoring",
     "category": ["Online", "Individual"],
     "description": "Mentoring sessions designed for aspiring entrepreneurs who are ready to take the leap. Get personalized advice on launching and growing a business, including creating business plans, raising funds, and scaling operations.",
@@ -313,7 +313,7 @@
   },
   {
     "id": 13,
-    "image": "https://i.ibb.co/image10.jpg",
+    "image": "https://i.ibb.co.com/W0c8jYj/Conflict-Resolution-Skills.gif",
     "serviceName": "Conflict Resolution Skills",
     "category": ["Offline", "Group"],
     "description": "This workshop teaches conflict resolution techniques that help you navigate disagreements in the workplace or personal life. Learn how to manage conflict constructively, facilitate discussions, and build healthier relationships.",
@@ -339,7 +339,7 @@
   },
   {
     "id": 14,
-    "image": "https://i.ibb.co/image11.jpg",
+    "image": "https://i.ibb.co.com/B6B1BW7/Personal-Branding.gif",
     "serviceName": "Personal Branding",
     "category": ["Online", "Individual"],
     "description": "Learn to build and promote your personal brand with this coaching session. Understand how to identify your unique strengths, develop your online presence, and communicate your value to employers and clients.",
@@ -365,7 +365,7 @@
   },
   {
     "id": 15,
-    "image": "https://i.ibb.co/image12.jpg",
+    "image": "https://i.ibb.co.com/rm5D1Dh/Digital-Marketing-Fundamentals.gif",
     "serviceName": "Digital Marketing Fundamentals",
     "category": ["Group", "Online"],
     "description": "This course covers the basics of digital marketing, including SEO, social media strategies, content marketing, and email marketing. Perfect for anyone looking to learn how to build an online presence and attract an audience through digital platforms.",

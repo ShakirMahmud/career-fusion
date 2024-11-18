@@ -13,7 +13,7 @@ const ServiceCards = ({ service }) => {
       className="group bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-blue-500 transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeIn"
     >
       {/* Image Section */}
-      <div className="overflow-hidden rounded-md h-40">
+      <div className="overflow-hidden rounded-md h-72">
         <img
           src={image}
           alt={serviceName}
@@ -28,7 +28,11 @@ const ServiceCards = ({ service }) => {
         <p className="text-sm text-gray-500 italic">
           {categoryDisplay || 'N/A'}
         </p>
-        <p className="text-gray-600 mt-2">{description}</p>
+        <p className="text-gray-600 mt-2">{description.slice(0, 100)}...{''}
+          <Link to={`/service/${serviceName}`} className="text-blue-600">
+            Read More
+          </Link>
+        </p>
       </div>
 
       {/* Price and Counselor */}
