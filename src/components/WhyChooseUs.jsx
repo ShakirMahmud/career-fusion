@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div ref={whyChooseUsRef} className="bg-gray-50 py-16 px-4">
+    <div ref={whyChooseUsRef} className="bg-card_bg py-16 my-6 lg:my-12 rounded-xl px-4">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h3 className="text-blue-500 text-sm font-semibold uppercase">

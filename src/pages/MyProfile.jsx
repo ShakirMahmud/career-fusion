@@ -34,33 +34,34 @@ const MyProfile = () => {
 
     }
     return (
-        <div>
+        <div className=''>
             <Helmet>
                 <title>MyProfile - CareerFusion</title>
             </Helmet>
-            <main className='min-h-[80vh]'>
-                <div className='flex flex-col items-center'>
-                    <img src={user?.photoURL} className='w-24' alt="" />
-                    <p>{user?.displayName}</p>
+            <main className='min-h-[120vh] bg-base-200 px-3 lg:px-0'>
+                <div className='flex flex-col items-center py-6 space-y-4'>
+                    <h2 className='text-3xl text-center'>Welcome!!  {user?.displayName}.</h2>
+                    <img src={user?.photoURL} className='w-24 ' alt="" />
+                    <p>Change Your Name or Photo-URL here.</p>
                 </div>
-                <div className=' flex justify-center items-center'>
-                    <div className="card bg-base-200 w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
+                
+                    <div className="card bg-white w-full max-w-xl mx-auto lg:p-6 rounded-xl shrink-0 shadow-2xl ">
                         <form onSubmit={handleUpdateProfile} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="text-lg">Name</span>
                                 </label>
                                 <input type="text" name='name' placeholder="your name" className="input rounded-xl input-bordered" defaultValue={user?.displayName || ''}
                                     required />
                                 <label className="label">
-                                    <span className="label-text">Photo-URL</span>
+                                    <span className="text-lg">Photo-URL</span>
                                 </label>
                                 <input type="text" name='photo' placeholder="your photo-url" className="input rounded-xl input-bordered" defaultValue={user?.photoURL || ''} required />
                                 
                             </div>
                             
                             <div className="form-control mt-6">
-                                <button type='submit' className="btn btn-primary">Save Changes</button>
+                                <button type='submit' className="btn btn-primary text-white text-xl rounded-xl">Save Changes</button>
                             </div>
                             <label>
                                 <p className='text-center'>Want to change Password? <Link to='/auth/forgetPassword' className="text-blue-600 link link-hover">Click here</Link></p>
@@ -68,7 +69,7 @@ const MyProfile = () => {
                             </label>
                         </form>
                     </div>
-                </div>
+                
             </main>
         </div>
     );

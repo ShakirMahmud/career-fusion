@@ -34,19 +34,24 @@ const ServiceDetails = () => {
             <Helmet>
                 <title>Service Details - {selectedService.serviceName} - CareerFusion</title>
             </Helmet>
-            <NavBar />
-            <section className="grid grid-cols-9 w-11/12 mx-auto gap-6">
+            <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
+            </header>
+            <section className="grid lg:grid-cols-9 w-11/12 mx-auto gap-6 my-12">
                 {/* Sidebar - showing all services as cards */}
-                <aside className="col-span-3 h-screen overflow-y-auto">
+                <aside className="lg:col-span-3 h-[60vh]  lg:h-screen overflow-x-auto lg:overflow-y-auto">
                     {data.map(service => (
                         <Link to={`/service/${service.serviceName}`} key={service.serviceName}>
                             <div
-                                className={`mb-6 w-4/5 mx-auto p-4 rounded-lg ${service.serviceName === selectedService.serviceName
+                                className={`mb-6 lg:w-4/5 mx-auto p-4 rounded-lg ${service.serviceName === selectedService.serviceName
                                     ? 'border-2 border-blue-500'
                                     : 'hover:border-transparent group'
                                     } bg-white shadow-md transition-all duration-300`}
                             >
-                                <div className="overflow-hidden rounded-md h-48">
+                                <div className="overflow-hidden rounded-md h-24 lg:h-48">
                                     <img
                                         src={service.image}
                                         alt={service.serviceName}
@@ -65,8 +70,8 @@ const ServiceDetails = () => {
                 </aside>
 
                 {/* Service Details */}
-                <section className="col-span-6 p-6">
-                    <div className="flex flex-col">
+                <section className="lg:col-span-6 lg:p-6 border-t-2 lg:border-t-0">
+                    <div className="flex flex-col mt-4 lg:mt-0">
                         <h2 className="text-3xl font-bold">{selectedService.serviceName}</h2>
                         <img
                             src={selectedService.image}

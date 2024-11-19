@@ -16,7 +16,7 @@ const HomeLayout = () => {
         return <Loading />
     }
     return (
-        <div>
+        <div className="bg-base-200">
             <Helmet>
                 <title>Home - CareerFusion</title>
             </Helmet>

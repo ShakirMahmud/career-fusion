@@ -1,11 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import ServiceCards from '../components/ServiceCards';
-import { AuthContext } from '../provider/AuthProvider';
+import React, { useContext, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import ServiceCards from "../components/ServiceCards";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Services = () => {
-  const services = useLoaderData();
+  const services = useLoaderData() || []; // Ensure services is an array (fallback to empty array)
   const { servicesRef } = useContext(AuthContext);
+
+  // Debugging: log the services data to check if it's an array
+  console.log("Services data:", services);
 
   // State to manage filters
   const [filters, setFilters] = useState({
@@ -62,26 +65,28 @@ const Services = () => {
   };
 
   // Apply filters to services
-  const filteredServices = services.filter((service) => {
-    const matchesCategory =
-      !filters.category.length || filters.category.some((cat) => service.category.includes(cat));
-    const matchesTimeOfDay =
-      !filters.timeOfDay.length || filters.timeOfDay.includes(service.timeOfDay);
-    const matchesRating = filters.rating <= service.rating;
+  const filteredServices = Array.isArray(services)
+    ? services.filter((service) => {
+        const matchesCategory =
+          !filters.category.length || filters.category.some((cat) => service.category.includes(cat));
+        const matchesTimeOfDay =
+          !filters.timeOfDay.length || filters.timeOfDay.includes(service.timeOfDay);
+        const matchesRating = filters.rating <= service.rating;
 
-    return matchesCategory && matchesTimeOfDay && matchesRating;
-  });
+        return matchesCategory && matchesTimeOfDay && matchesRating;
+      })
+    : [];
 
   return (
-    <div ref={servicesRef} className="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 py-10">
-      <h2 className="text-3xl lg:text-4xl font-extrabold text-blue-800 mb-8">
+    <div ref={servicesRef} className="bg-card_bg rounded-xl py-10">
+      <h2 className="text-3xl lg:text-4xl text-center  font-extrabold text-btn_bg mb-8">
         Explore Our Counseling Services
       </h2>
-      <section className="grid grid-cols-9">
+      <section className="grid lg:grid-cols-9">
         {/* Filter Section */}
-        <aside className="col-span-2 p-4 bg-white rounded-lg shadow-lg relative">
+        <aside className="lg:col-span-2 p-4 m-4 lg:m-0 lg:mx-4 bg-white rounded-lg shadow-lg relative">
           {/* Clear Filters Button */}
-          <div className='h-auto'>
+          <div className="h-auto ">
             <button
               onClick={clearFilters}
               className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-700 transition-colors"
@@ -142,13 +147,12 @@ const Services = () => {
         </aside>
 
         {/* Service Cards Section */}
-        <div className="col-span-7 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 lg:px-16">
+        <div className="lg:col-span-7 mt-6 lg:mt-0 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 lg:px-16">
           {filteredServices.length > 0 ? (
             filteredServices.map((service, index) => (
               <div
                 key={service.id}
-                className={`animate__animated ${index % 2 === 0 ? "animate__slideInLeft" : "animate__slideInRight"
-                  }`}
+                className={`animate__animated ${index % 2 === 0 ? "animate__slideInLeft" : "animate__slideInRight"}`}
               >
                 <ServiceCards service={service} />
               </div>

@@ -97,11 +97,11 @@ const SignUp = () => {
     }
 
     return (
-        <div className='min-h-[80vh] flex justify-center items-center'>
+        <div className='min-h-[140vh] lg:min-h-[90vh] p-3 bg-base-200 flex justify-center items-center'>
             <Helmet>
                 <title>Sign-Up - CareerFusion</title>
             </Helmet>
-            <div className="card bg-base-200 w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
+            <div className="card bg-white w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
                 <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
                         <label className="label">

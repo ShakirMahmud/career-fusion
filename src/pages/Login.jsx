@@ -66,11 +66,11 @@ const Login = () => {
     };
 
     return (
-        <div className='min-h-[80vh] flex justify-center items-center'>
+        <div className='min-h-[120vh] lg:min-h-[80vh] bg-base-200 flex justify-center items-center p-3'>
             <Helmet>
                 <title>Login - CareerFusion</title>
             </Helmet>
-            <div className="card bg-base-200 w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
+            <div className="card bg-white w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">

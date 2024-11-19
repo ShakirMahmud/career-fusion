@@ -5,11 +5,11 @@ const Footer = () => {
     const navigate = useNavigate(); // Hook to enable navigation
 
     return (
-        <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-center bg-base-100 text-base-content rounded p-10">
             {/* Logo Section */}
             <div
                 onClick={() => navigate('/')}
-                className="flex items-center gap-2 cursor-pointer mb-8">
+                className="flex items-center gap-2 cursor-pointer lg:mb-8">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             {/* Main Links */}
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
                 {/* Useful Links */}
                 <div>
                     <h2 className="text-lg font-bold mb-4">Useful Links</h2>
@@ -57,11 +57,11 @@ const Footer = () => {
                     <h2 className="text-lg font-bold mb-4">Contact Details</h2>
                     <ul className="list-none space-y-2">
                         <li>
-                            <span className="block">D-60A, Chhatarpur Enclave</span>
-                            <span className="block">New Delhi - 110074</span>
+                            <span className="block">Dhaka, Bangladesh</span>
+                            
                         </li>
-                        <li>Email: <a href="mailto:info@careerfusion.com" className="link link-hover">info@careerfusion.com</a></li>
-                        <li>Phone: <a href="tel:+919319336222" className="link link-hover">+91-9319336222</a></li>
+                        <li>Email: <a href="mailto:shakirmahmud50@gmail.com" className="link link-hover">shakirmahmud50@gmail.com</a></li>
+                        <li>Phone: <a href="" className="link link-hover">+880-1222222222</a></li>
                     </ul>
                 </div>
             </div>

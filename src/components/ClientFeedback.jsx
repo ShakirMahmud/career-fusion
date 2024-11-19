@@ -48,7 +48,7 @@ const ClientFeedback = () => {
   ];
 
   return (
-    <div ref={clientFeedbackRef} className="bg-gray-50 py-16 px-4">
+    <div ref={clientFeedbackRef} className="bg-gray-50 rounded-xl py-16 px-4">
       <h2 className="text-center text-blue-700 text-3xl font-bold mb-12">
         Client Feedback
       </h2>

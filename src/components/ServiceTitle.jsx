@@ -4,10 +4,10 @@ import { FaUserGraduate, FaUsers, FaChalkboardTeacher } from 'react-icons/fa'; /
 
 const ServiceTitle = () => {
     return (
-        <div className="relative bg-gray-50 my-12 p-4 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="relative rounded-xl bg-card_bg my-12 p-4 flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Section */}
             <div className="w-full lg:w-1/2 order-1 lg:order-none lg:translate-y-[20%]">
-                <h1 className="text-4xl font-bold text-gray-800 mb-4 leading-tight">
+                <h1 className="text-4xl font-bold text-btn_bg mb-4 leading-tight">
                     Explore Our Career Counseling Services
                 </h1>
                 <p className="text-lg text-gray-600 mb-6">

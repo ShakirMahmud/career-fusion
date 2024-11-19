@@ -14,11 +14,11 @@ const Banner = () => {
     const { servicesRef } = useContext(AuthContext);
     const handleNavigateToServices = () => {
         if (servicesRef.current) {
-            servicesRef.current.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+            servicesRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
     return (
-        <div className="h-[70vh]"> {/* Adjust height as needed */}
+        <div className="h-[70vh]">
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -29,15 +29,15 @@ const Banner = () => {
                 pagination={{
                     clickable: true,
                 }}
-                navigation={true}
+                navigation={false}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper h-full"
             >
-                {/* Slide 1 */}
+
                 <SwiperSlide>
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full  h-full">
                         <video
-                            className="absolute top-0 left-0 w-full h-full object-cover"
+                            className="absolute  top-0 left-0 w-full h-full object-cover"
                             src={video1}
                             autoPlay
                             loop
@@ -56,7 +56,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
 
-                {/* Slide 2 */}
+
                 <SwiperSlide>
                     <div className="relative w-full h-full">
                         <video
@@ -79,7 +79,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
 
-                {/* Slide 3 */}
+
                 <SwiperSlide>
                     <div className="relative w-full h-full">
                         <video

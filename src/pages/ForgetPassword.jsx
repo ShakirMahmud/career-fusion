@@ -29,7 +29,7 @@ const ForgetPassword = () => {
                 timerProgressBar: true, // Shows a progress bar for the timer
             }).then((result) => {
                 if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                    window.open('https://mail.google.com', '_blank'); // Open Gmail
+                    window.open('https://mail.google.com/mail/u/0/#inbox', '_blank'); // Open Gmail
                     logOut(); // Log out the user
                     navigate('/auth/login'); // Redirect to login page
                 }
