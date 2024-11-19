@@ -3,6 +3,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
@@ -18,8 +19,20 @@ const Login = () => {
         userLogin(email, password)
             .then(res => {
                 setUser(res.user)
-                console.log(res.user)
-                navigate(location?.state ? location.state : '/');
+                Swal.fire({
+                    title: 'Log In Successful!',
+                    text: 'You have successfully Logged in. You will be redirected shortly, or click OK to proceed immediately.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    timer: 3000, // 3-second timer
+                    timerProgressBar: true, // Shows a progress bar for the timer
+                }).then((result) => {
+                    if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
+                        // Redirect when OK is clicked or timer runs out
+                        navigate(location?.state ? location.state : '/');
+                    }
+                });
+                
             })
             .catch(err => {
                 console.error(err.code);

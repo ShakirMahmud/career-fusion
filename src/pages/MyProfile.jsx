@@ -5,6 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { auth } from '../firebase/firebase.config';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyProfile = () => {
     // const [isClicked, setIsClicked] = useState(true);
@@ -19,13 +20,20 @@ const MyProfile = () => {
         // const password = form.get('password');
         console.log(auth.currentUser)
         updateUserProfile({ displayName: name, photoURL: photo })
-            .then(res => {
+            .then(() => {
                 setUser({
                     ...user,
                     displayName: name,
                     photoURL: photo,
                 });
-                console.log(res);
+                Swal.fire({
+                    title: 'Profile Update Successful!',
+                    text: 'You have successfully Updated Your Profile.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    timer: 3000, // 3-second timer
+                    timerProgressBar: true, // Shows a progress bar for the timer
+                });
             }).catch(err => {
                 console.error(err.code);
             })

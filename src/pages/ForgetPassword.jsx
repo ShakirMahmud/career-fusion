@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react';
-
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../provider/AuthProvider';
 import { auth } from '../firebase/firebase.config';
+import Swal from 'sweetalert2'; // Import SweetAlert2
 
 const ForgetPassword = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [successMessage, setSuccessMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate(); // For navigation after logout
 
     const handlePasswordReset = async (e) => {
@@ -18,16 +16,32 @@ const ForgetPassword = () => {
         const email = form.get('email');
 
         try {
+            // Send password reset email
             await sendPasswordResetEmail(auth, email);
-            setSuccessMessage('Password reset email sent! Redirecting to Gmail...');
-            setErrorMessage('');
-            setTimeout(() => {
-                window.open('https://mail.google.com', '_blank');
-                logOut(); 
-                navigate('/auth/login'); // Redirect to login page
-            }, 2000);
+            
+            // Show success alert
+            Swal.fire({
+                title: 'Password Reset Email Sent!',
+                text: 'You will be redirected shortly, or click OK to proceed immediately.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                timer: 3000, // Auto close after 3 seconds
+                timerProgressBar: true, // Shows a progress bar for the timer
+            }).then((result) => {
+                if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
+                    window.open('https://mail.google.com', '_blank'); // Open Gmail
+                    logOut(); // Log out the user
+                    navigate('/auth/login'); // Redirect to login page
+                }
+            });
         } catch (error) {
-            setErrorMessage(error.message || 'Failed to send password reset email.');
+            // Show error alert
+            Swal.fire({
+                title: 'Error!',
+                text: error.message || 'Failed to send password reset email.',
+                icon: 'error',
+                confirmButtonText: 'Try Again'
+            });
         }
     };
 
@@ -59,12 +73,6 @@ const ForgetPassword = () => {
                             </button>
                         </div>
                     </form>
-                    {successMessage && (
-                        <p className="text-green-600 text-center mt-4">{successMessage}</p>
-                    )}
-                    {errorMessage && (
-                        <p className="text-red-600 text-center mt-4">{errorMessage}</p>
-                    )}
                 </div>
             </main>
         </div>

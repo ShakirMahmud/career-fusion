@@ -97,7 +97,12 @@ const CareerPathAssessment = () => {
       <Helmet>
         <title>CareerPathAssessment - CareerFusion</title>
       </Helmet>
-      <NavBar />
+      <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
+            </header>
       <div className="p-8 max-w-5xl mx-auto">
         <h2 className="text-3xl font-semibold mb-6">Career Path Assessment</h2>
         {!showResults ? (
