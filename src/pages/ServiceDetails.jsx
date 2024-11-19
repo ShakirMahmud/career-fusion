@@ -3,6 +3,7 @@ import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 const ServiceDetails = () => {
@@ -30,6 +31,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Service Details - {selectedService.serviceName} - CareerFusion</title>
+            </Helmet>
             <NavBar />
             <section className="grid grid-cols-9 w-11/12 mx-auto gap-6">
                 {/* Sidebar - showing all services as cards */}

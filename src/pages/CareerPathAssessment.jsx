@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import ServiceCards from '../components/ServiceCards';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const CareerPathAssessment = () => {
   const [answers, setAnswers] = useState({});
@@ -93,6 +94,9 @@ const CareerPathAssessment = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CareerPathAssessment - CareerFusion</title>
+      </Helmet>
       <NavBar />
       <div className="p-8 max-w-5xl mx-auto">
         <h2 className="text-3xl font-semibold mb-6">Career Path Assessment</h2>

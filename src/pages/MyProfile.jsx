@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import { AuthContext } from '../provider/AuthProvider';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { auth } from '../firebase/firebase.config';
+import { Helmet } from 'react-helmet-async';
 
 const MyProfile = () => {
     // const [isClicked, setIsClicked] = useState(true);
@@ -31,6 +32,9 @@ const MyProfile = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>MyProfile - CareerFusion</title>
+            </Helmet>
             <header className="relative bg-nav text-white">
                 <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
                 <div className="relative">

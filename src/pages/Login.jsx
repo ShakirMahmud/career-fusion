@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
@@ -37,7 +38,11 @@ const Login = () => {
             })
     }
     return (
+        
         <div className='min-h-[80vh] flex justify-center items-center'>
+            <Helmet>
+                <title>Login - CareerFusion</title>
+            </Helmet>
             <div className="card bg-base-200 w-full max-w-xl mx-auto p-6 rounded-xl shrink-0 shadow-2xl">
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">

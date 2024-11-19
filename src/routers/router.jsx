@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         element: <Services />,
         loader: () => fetch('../serviceData.json'),
       },
-      
+
     ]
   },
   {
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
     element: <AuthLayout />,
     children: [
       {
-        path: '/auth/login', 
+        path: '/auth/login',
         element: <Login />
       },
       {
@@ -50,17 +50,19 @@ export const router = createBrowserRouter([
   {
     path: '/myProfile',
     element: <PrivateRoute>
-      <MyProfile/>
+      <MyProfile />
     </PrivateRoute>
   },
   {
     path: '/careerPathAssessment',
-    element: <CareerPathAssessment/>,
+    element: <PrivateRoute>
+      <CareerPathAssessment />
+    </PrivateRoute>,
     loader: () => fetch('../serviceData.json'),
-    
+
   },
   {
     path: "*",
-    element: <ErrorPage/>
+    element: <ErrorPage />
   }
 ]);
