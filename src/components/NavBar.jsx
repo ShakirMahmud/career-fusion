@@ -11,7 +11,7 @@ const NavBar = () => {
 
     return (
         <div className='w-11/12 mx-auto '>
-            <div  className=' pt-2 flex justify-between items-center'>
+            <div  className=' py-4 flex justify-between items-center'>
                 <div onClick={()=> navigate('/')} className="flex items-center gap-2 cursor-pointer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const NavBar = () => {
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/pricing'>Pricing</NavLink>
                     {
-                        user && <NavLink to='/profile'>My Profile</NavLink>
+                        user && <NavLink to='/myProfile'>My Profile</NavLink>
                     }
                 </ul>
                 <div className='flex justify-center'>

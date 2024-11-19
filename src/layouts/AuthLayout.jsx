@@ -17,8 +17,11 @@ const AuthLayout = () => {
 
     return (
         <div>
-            <header>
-                <NavBar></NavBar>
+            <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
             </header>
             <div className={`${animation}`}>
                 <Outlet />
