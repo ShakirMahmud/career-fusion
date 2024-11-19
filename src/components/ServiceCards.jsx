@@ -10,10 +10,10 @@ const ServiceCards = ({ service }) => {
 
   return (
     <div
-      className="group bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-blue-500 transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeIn"
+      className="flex flex-col bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-blue-500 transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeIn h-full"
     >
       {/* Image Section */}
-      <div className="overflow-hidden rounded-md h-72">
+      <div className="overflow-hidden rounded-md h-48">
         <img
           src={image}
           alt={serviceName}
@@ -22,17 +22,18 @@ const ServiceCards = ({ service }) => {
       </div>
 
       {/* Service Info */}
-      <div className="mt-4">
+      <div className="mt-4 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-blue-700">{serviceName}</h3>
-        {/* Displaying Categories */}
         <p className="text-sm text-gray-500 italic">
           {categoryDisplay || 'N/A'}
         </p>
-        <p className="text-gray-600 mt-2">{description.slice(0, 100)}...{''}
+        <p className="text-gray-600 mt-2">
+          {description.slice(0, 100)}...
           <Link to={`/service/${serviceName}`} className="text-blue-600">
             Read More
           </Link>
         </p>
+        <div className="flex-grow"></div>
       </div>
 
       {/* Price and Counselor */}
@@ -51,7 +52,7 @@ const ServiceCards = ({ service }) => {
 
       {/* Learn More Button */}
       <div className="mt-6">
-        <Link to={`/service/${serviceName}`} className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+        <Link to={`/service/${serviceName}`} className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors w-full text-center block">
           Learn More
         </Link>
       </div>

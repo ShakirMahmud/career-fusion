@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const ServiceDetails = () => {
@@ -11,6 +12,7 @@ const ServiceDetails = () => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         const matchedService = data.find(service => service.serviceName === serviceName);
@@ -122,7 +124,7 @@ const ServiceDetails = () => {
                                 <ul className="list-disc pl-6">
                                     {comments.map((comment, index) => (
                                         <li key={index} className="text-gray-700 mt-2">
-                                            {comment}
+                                            <span className='font-medium'>{user?.displayName}</span> - {comment}
                                         </li>
                                     ))}
                                 </ul>

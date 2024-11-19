@@ -26,12 +26,12 @@ const NavBar = () => {
                     </span>
                 </div>
 
-                <ul className='flex justify-center w-80 gap-4'>
+                <ul className='flex justify-center  gap-4'>
                     <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/pricing'>Pricing</NavLink>
                     {
                         user && <NavLink to='/myProfile'>My Profile</NavLink>
                     }
+                    <NavLink to='/careerPathAssessment'>CareerPathAssessment</NavLink>
                 </ul>
                 <div className='flex justify-center'>
                     {

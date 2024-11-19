@@ -10,6 +10,7 @@ import ServiceDetails from "../pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import MyProfile from "../pages/MyProfile";
+import CareerPathAssessment from "../pages/CareerPathAssessment";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Services />,
         loader: () => fetch('../serviceData.json'),
-      }
+      },
+      
     ]
   },
   {
@@ -50,6 +52,12 @@ export const router = createBrowserRouter([
     element: <PrivateRoute>
       <MyProfile/>
     </PrivateRoute>
+  },
+  {
+    path: '/careerPathAssessment',
+    element: <CareerPathAssessment/>,
+    loader: () => fetch('../serviceData.json'),
+    
   },
   {
     path: "*",
