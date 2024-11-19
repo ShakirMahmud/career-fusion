@@ -29,7 +29,7 @@ const NavBar = () => {
                 <ul className='flex justify-center  gap-4'>
                     <NavLink to='/'>Home</NavLink>
                     {
-                        user && <NavLink to='/myProfile'>My Profile</NavLink>
+                        user && <NavLink to='/auth/myProfile'>My Profile</NavLink>
                     }
                     <NavLink to='/careerPathAssessment'>CareerPathAssessment</NavLink>
                 </ul>

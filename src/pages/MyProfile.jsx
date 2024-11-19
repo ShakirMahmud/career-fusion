@@ -4,12 +4,13 @@ import { AuthContext } from '../provider/AuthProvider';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { auth } from '../firebase/firebase.config';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
     // const [isClicked, setIsClicked] = useState(true);
     const { user, updateUserProfile, setUser } = useContext(AuthContext);
 
-    const handleUpdateProfile = e =>{
+    const handleUpdateProfile = e => {
         e.preventDefault();
         const form = new FormData(e.target);
         const name = form.get('name');
@@ -17,33 +18,27 @@ const MyProfile = () => {
         // const email = form.get('email');
         // const password = form.get('password');
         console.log(auth.currentUser)
-        updateUserProfile({ displayName: name, photoURL: photo})
-        .then(res =>{
-            setUser({
-                ...user,
-                displayName: name,
-                photoURL: photo,
-            });
-            console.log(res);
-        }).catch(err =>{
-            console.error(err.code);
-        })
-        
+        updateUserProfile({ displayName: name, photoURL: photo })
+            .then(res => {
+                setUser({
+                    ...user,
+                    displayName: name,
+                    photoURL: photo,
+                });
+                console.log(res);
+            }).catch(err => {
+                console.error(err.code);
+            })
+
     }
     return (
         <div>
             <Helmet>
                 <title>MyProfile - CareerFusion</title>
             </Helmet>
-            <header className="relative bg-nav text-white">
-                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
-                <div className="relative">
-                    <NavBar />
-                </div>
-            </header>
             <main className='min-h-[80vh]'>
                 <div className='flex flex-col items-center'>
-                    <img src={user?.photoURL} className='w-24'  alt="" />
+                    <img src={user?.photoURL} className='w-24' alt="" />
                     <p>{user?.displayName}</p>
                 </div>
                 <div className=' flex justify-center items-center'>
@@ -78,6 +73,10 @@ const MyProfile = () => {
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-primary">Update The Changes</button>
                             </div>
+                            <label>
+                                <p className='text-center'>Want to change Password? <Link to='/auth/forgetPassword' className="text-blue-600 link link-hover">Click here</Link></p>
+                                
+                            </label>
                         </form>
                     </div>
                 </div>

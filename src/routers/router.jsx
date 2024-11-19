@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import MyProfile from "../pages/MyProfile";
 import CareerPathAssessment from "../pages/CareerPathAssessment";
+import ForgetPassword from "../pages/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -45,14 +46,20 @@ export const router = createBrowserRouter([
         path: '/auth/signUp',
         element: <SignUp />
       },
+      {
+        path: '/auth/forgetPassword',
+        element: <ForgetPassword />
+       
+      },
+      {
+        path: '/auth/myProfile',
+        element: <PrivateRoute>
+          <MyProfile />
+        </PrivateRoute>
+      },
     ]
   },
-  {
-    path: '/myProfile',
-    element: <PrivateRoute>
-      <MyProfile />
-    </PrivateRoute>
-  },
+
   {
     path: '/careerPathAssessment',
     element: <PrivateRoute>
