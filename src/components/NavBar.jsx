@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import logo from '../assets/logo.png'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import gif from '../assets/Animation - 1731940087791.gif'
@@ -7,12 +6,37 @@ import gif from '../assets/Animation - 1731940087791.gif'
 const NavBar = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, clientFeedbackRef, whyChooseUsRef } = useContext(AuthContext);
+    const handleNavigateToClientFeedback = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                if (clientFeedbackRef?.current) {
+                    clientFeedbackRef.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+        } else if (clientFeedbackRef?.current) {
+            clientFeedbackRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleNavigateToWhyChooseUs = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                if (whyChooseUsRef?.current) {
+                    whyChooseUsRef.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+        } else if (whyChooseUsRef?.current) {
+            whyChooseUsRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className='w-11/12 mx-auto '>
-            <div  className=' py-4 flex justify-between items-center'>
-                <div onClick={()=> navigate('/')} className="flex items-center gap-2 cursor-pointer">
+            <div className=' py-4 flex justify-between items-center'>
+                <div onClick={() => navigate('/')} className="flex items-center gap-2 cursor-pointer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -32,6 +56,8 @@ const NavBar = () => {
                         user && <NavLink to='/auth/myProfile'>My Profile</NavLink>
                     }
                     <NavLink to='/careerPathAssessment'>CareerPathAssessment</NavLink>
+                    <button onClick={handleNavigateToWhyChooseUs} >Why Choose Us</button>
+                    <button onClick={handleNavigateToClientFeedback} >Client Feedback</button>
                 </ul>
                 <div className='flex justify-center'>
                     {

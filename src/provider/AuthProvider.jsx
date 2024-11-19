@@ -8,6 +8,8 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const servicesRef = useRef(null);
+    const whyChooseUsRef = useRef(null);
+    const clientFeedbackRef = useRef(null);
 
     const createNewUser = (email, password) =>{
         setLoading(true);
@@ -43,6 +45,8 @@ const AuthProvider = ({children}) => {
         signInWithGoogle,
         loading,
         servicesRef,
+        clientFeedbackRef,
+        whyChooseUsRef,
     }
 
     useEffect(()=>{

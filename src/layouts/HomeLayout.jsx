@@ -7,6 +7,8 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Loading from "../pages/Loading";
 import { Helmet } from "react-helmet-async";
+import ClientFeedback from "../components/ClientFeedback";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 const HomeLayout = () => {
     const { loading } = useContext(AuthContext);
@@ -32,6 +34,12 @@ const HomeLayout = () => {
                     <ServiceTitle />
                 </section>
                 <Outlet />
+                <section>
+                    <WhyChooseUs/>
+                </section>
+                <section>
+                    <ClientFeedback/>
+                </section>
             </main>
             <footer>
                 <Footer />

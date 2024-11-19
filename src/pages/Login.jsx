@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
@@ -11,17 +11,18 @@ const Login = () => {
     const location = useLocation();
     const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
 
-    const handleLogin = e => {
+    const handleLogin = (e) => {
         e.preventDefault();
         const form = new FormData(e.target);
         const email = form.get('email');
         const password = form.get('password');
+        
         userLogin(email, password)
-            .then(res => {
-                setUser(res.user)
+            .then((res) => {
+                setUser(res.user);
                 Swal.fire({
                     title: 'Log In Successful!',
-                    text: 'You have successfully Logged in. You will be redirected shortly, or click OK to proceed immediately.',
+                    text: 'You have successfully logged in. You will be redirected shortly, or click OK to proceed immediately.',
                     icon: 'success',
                     confirmButtonText: 'OK',
                     timer: 3000, // 3-second timer
@@ -32,26 +33,39 @@ const Login = () => {
                         navigate(location?.state ? location.state : '/');
                     }
                 });
-                
             })
-            .catch(err => {
-                console.error(err.code);
-            })
-    }
+            .catch((err) => {
+                // Handle errors and display the relevant error message
+                let errorMessage = 'Wrong Email or Password!!!';
+
+                // Show error alert using SweetAlert2
+                Swal.fire({
+                    title: 'Login Failed!',
+                    text: errorMessage,
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                });
+            });
+    };
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
-            .then(res => {
-                setUser(res.user)
-                console.log(res.user)
+            .then((res) => {
+                setUser(res.user);
                 navigate(location?.state ? location.state : '/');
             })
-            .catch(err => {
+            .catch((err) => {
                 console.error(err.code);
-            })
-    }
+                Swal.fire({
+                    title: 'Google Sign In Failed!',
+                    text: 'An error occurred while signing in with Google.',
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                });
+            });
+    };
+
     return (
-        
         <div className='min-h-[80vh] flex justify-center items-center'>
             <Helmet>
                 <title>Login - CareerFusion</title>
@@ -70,9 +84,7 @@ const Login = () => {
                         </label>
                         <input type={isClicked ? 'password' : 'text'} name='password' placeholder="password" className="input rounded-xl input-bordered" required />
                         <button type='button' onClick={() => setIsClicked(!isClicked)} className="absolute right-5 top-[3rem] text-2xl text-gray-700">
-                            {
-                                isClicked ? <AiOutlineEye /> : <AiOutlineEyeInvisible />
-                            }
+                            {isClicked ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
                         </button>
                         <label>
                             <Link to='/auth/forgetPassword' className="label-text-alt link link-hover">Forgot password?</Link>
@@ -86,7 +98,7 @@ const Login = () => {
                     <span className="label-text">Don't have an account yet? </span>
                     <Link to='/auth/signUp' className="link link-hover">Sign Up</Link>
                 </div>
-                <div className="w-full flex  justify-center py-6">
+                <div className="w-full flex justify-center py-6">
                     <button onClick={handleSignInWithGoogle} className="btn btn-ghost bg-base-300 rounded-lg text-lg">Log In with Google</button>
                 </div>
             </div>
