@@ -98,7 +98,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='min-h-[140vh] lg:min-h-[90vh] p-3 bg-base-200 flex justify-center items-center'>
+        <div className='min-h-[100vh] lg:min-h-[90vh] p-3 bg-base-200 flex justify-center items-center'>
             <Helmet>
                 <title>Sign-Up - CareerFusion</title>
             </Helmet>

@@ -84,7 +84,7 @@ const Services = () => {
       </h2>
       <section className="grid lg:grid-cols-9">
         {/* Filter Section */}
-        <aside className="lg:col-span-2 p-4 m-4 lg:m-0 lg:mx-4 bg-white rounded-lg shadow-lg relative h-screen">
+        <aside className="lg:col-span-2 p-4 m-4 lg:m-0 lg:mx-4 bg-white rounded-lg shadow-lg relative lg:h-screen">
           {/* Clear Filters Button */}
           <div className="h-auto ">
             <button

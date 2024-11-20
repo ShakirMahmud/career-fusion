@@ -4,6 +4,8 @@ import { auth } from '../firebase/firebase.config';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const MyProfile = () => {
     const { user, updateUserProfile, setUser } = useContext(AuthContext);
@@ -38,7 +40,13 @@ const MyProfile = () => {
             <Helmet>
                 <title>MyProfile - CareerFusion</title>
             </Helmet>
-            <main className='min-h-[120vh] bg-base-200 px-3 lg:px-0'>
+            <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
+            </header>
+            <main className='min-h-[100vh] bg-base-200 px-3 lg:px-0'>
                 <div className='flex flex-col items-center py-6 space-y-4'>
                     <h2 className='text-3xl text-center'>Welcome!!  {user?.displayName}.</h2>
                     <img src={user?.photoURL} className='w-24 ' alt="" />
@@ -71,6 +79,9 @@ const MyProfile = () => {
                     </div>
                 
             </main>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     );
 };
