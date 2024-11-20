@@ -46,11 +46,7 @@ export const router = createBrowserRouter([
         path: '/auth/signUp',
         element: <SignUp />
       },
-      {
-        path: '/auth/forgetPassword',
-        element: <ForgetPassword />
-       
-      },
+      
       
     ]
   },
@@ -59,6 +55,10 @@ export const router = createBrowserRouter([
     element: <PrivateRoute>
       <MyProfile />
     </PrivateRoute>
+  },
+  {
+    path: '/auth/forgetPassword',
+    element: <ForgetPassword />
   },
 
   {

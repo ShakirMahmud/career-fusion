@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../provider/AuthProvider';
 import { auth } from '../firebase/firebase.config';
 import Swal from 'sweetalert2'; 
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
 
 const ForgetPassword = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -47,8 +49,14 @@ const ForgetPassword = () => {
             <Helmet>
                 <title>Forget Password - CareerFusion</title>
             </Helmet>
-            <main className="min-h-[80vh] flex flex-col justify-center items-center">
-                <div className="card bg-base-200 w-full max-w-md mx-auto p-6 rounded-xl shadow-2xl">
+            <header className="relative bg-nav text-white">
+                <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+                <div className="relative">
+                    <NavBar />
+                </div>
+            </header>
+            <main className="min-h-[80vh] flex flex-col bg-base-300 p-3 justify-center items-center">
+                <div className="card bg-white w-full max-w-md mx-auto p-6 rounded-xl shadow-2xl">
                     <h2 className="text-2xl font-bold text-center mb-4">Forget Password</h2>
                     <form onSubmit={handlePasswordReset} className="card-body">
                         <div className="form-control">
@@ -72,6 +80,9 @@ const ForgetPassword = () => {
                     </form>
                 </div>
             </main>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     );
 };
