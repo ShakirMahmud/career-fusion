@@ -4,29 +4,24 @@ import ServiceCards from "../components/ServiceCards";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Services = () => {
-  const services = useLoaderData() || []; // Ensure services is an array (fallback to empty array)
+  const services = useLoaderData() || []; 
   const { servicesRef } = useContext(AuthContext);
 
-  // Debugging: log the services data to check if it's an array
-  console.log("Services data:", services);
-
-  // State to manage filters
   const [filters, setFilters] = useState({
-    category: [], // Selected categories (Online, Offline, Group)
-    rating: 0, // Minimum rating to filter
-    timeOfDay: [], // Selected times of the day (Morning, Afternoon, Evening)
+    category: [], 
+    rating: 0, 
+    timeOfDay: [], 
   });
 
-  // Function to handle changes in category filters
   const handleCategoryChange = (value) => {
     setFilters((prev) => {
       const updatedCategories = prev.category.includes(value)
-        ? prev.category.filter((cat) => cat !== value) // Remove category if already selected
-        : value === "Offline" // Mutually exclusive logic
+        ? prev.category.filter((cat) => cat !== value) 
+        : value === "Offline" 
           ? ["Offline"]
           : value === "Online"
             ? ["Online"]
-            : [...prev.category.filter((cat) => cat !== "Online" && cat !== "Offline"), value]; // Add non-exclusive categories
+            : [...prev.category.filter((cat) => cat !== "Online" && cat !== "Offline"), value]; 
       return {
         ...prev,
         category: updatedCategories,
@@ -34,12 +29,11 @@ const Services = () => {
     });
   };
 
-  // Function to handle changes in time of day filters
   const handleTimeOfDayChange = (value) => {
     setFilters((prev) => {
       const updatedTimes = prev.timeOfDay.includes(value)
-        ? prev.timeOfDay.filter((time) => time !== value) // Remove time if already selected
-        : [...prev.timeOfDay, value]; // Add time
+        ? prev.timeOfDay.filter((time) => time !== value)
+        : [...prev.timeOfDay, value];
       return {
         ...prev,
         timeOfDay: updatedTimes,
@@ -47,7 +41,6 @@ const Services = () => {
     });
   };
 
-  // Function to handle slider or other inputs (e.g., Rating)
   const handleValueChange = (type, value) => {
     setFilters((prev) => ({
       ...prev,
@@ -55,7 +48,6 @@ const Services = () => {
     }));
   };
 
-  // Clear all filters
   const clearFilters = () => {
     setFilters({
       category: [],
@@ -64,7 +56,6 @@ const Services = () => {
     });
   };
 
-  // Apply filters to services
   const filteredServices = Array.isArray(services)
     ? services.filter((service) => {
         const matchesCategory =
@@ -83,9 +74,7 @@ const Services = () => {
         Explore Our Counseling Services
       </h2>
       <section className="grid lg:grid-cols-9">
-        {/* Filter Section */}
         <aside className="lg:col-span-2 p-4 m-4 lg:m-0 lg:mx-4 bg-white rounded-lg shadow-lg relative lg:h-screen">
-          {/* Clear Filters Button */}
           <div className="h-auto ">
             <button
               onClick={clearFilters}
@@ -95,8 +84,6 @@ const Services = () => {
             </button>
 
             <h3 className="text-lg font-bold mb-4">Filters</h3>
-
-            {/* Category Filter */}
             <div className="mb-4">
               <p className="font-semibold mb-2">Category</p>
               <div>
@@ -113,7 +100,6 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Rating Filter */}
             <div className="mb-4">
               <p className="font-semibold mb-2">Rating</p>
               <input
@@ -127,7 +113,6 @@ const Services = () => {
               <p>Rating: {filters.rating}+</p>
             </div>
 
-            {/* Time of Day Filter */}
             <div className="mb-4">
               <p className="font-semibold mb-2">Time of Day</p>
               <div>
@@ -146,7 +131,6 @@ const Services = () => {
           </div>
         </aside>
 
-        {/* Service Cards Section */}
         <div className="lg:col-span-7 mt-6 lg:mt-0 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 lg:px-16">
           {filteredServices.length > 0 ? (
             filteredServices.map((service, index) => (
@@ -158,7 +142,6 @@ const Services = () => {
               </div>
             ))
           ) : (
-            // No Data Found Message
             <div className="col-span-full text-center text-gray-500 text-xl">
               No data found with this filter.
             </div>

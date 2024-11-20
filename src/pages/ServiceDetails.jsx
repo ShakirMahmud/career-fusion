@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
+import Loading from './Loading';
 
 
 const ServiceDetails = () => {
@@ -27,8 +28,9 @@ const ServiceDetails = () => {
         }
     };
 
-    if (!selectedService) return <div>Loading...</div>; // Loading state for fetching the service
-
+    if (!selectedService){
+        return <Loading></Loading>
+    } ;
     return (
         <div>
             <Helmet>
@@ -41,7 +43,6 @@ const ServiceDetails = () => {
                 </div>
             </header>
             <section className="grid lg:grid-cols-9 w-11/12 mx-auto gap-6 my-12">
-                {/* Sidebar - showing all services as cards */}
                 <aside className="lg:col-span-3 h-[60vh]  lg:h-screen overflow-x-auto lg:overflow-y-auto">
                     {data.map(service => (
                         <Link to={`/service/${service.serviceName}`} key={service.serviceName}>
@@ -69,7 +70,6 @@ const ServiceDetails = () => {
                     ))}
                 </aside>
 
-                {/* Service Details */}
                 <section className="lg:col-span-6 lg:p-6 border-t-2 lg:border-t-0">
                     <div className="flex flex-col mt-4 lg:mt-0">
                         <h2 className="text-3xl font-bold">{selectedService.serviceName}</h2>
@@ -89,13 +89,11 @@ const ServiceDetails = () => {
 
                         <div className="mt-4 flex justify-between items-center">
                             <p className="text-sm text-gray-500">{selectedService.duration}</p>
-                            {/* Use Rating Component */}
                             <p className="flex items-center text-yellow-500">
                                 {'★'.repeat(Math.floor(selectedService.rating))} <span className="text-gray-500 ml-2">({selectedService.rating})</span>
                             </p>
                         </div>
 
-                        {/* New Information in Two Columns */}
                         <div className="mt-6 grid grid-cols-2 gap-6">
                             <div>
                                 <h3 className="text-2xl font-semibold mb-2">Location</h3>
@@ -126,7 +124,6 @@ const ServiceDetails = () => {
                             </div>
                         </div>
 
-                        {/* Feedback Section */}
                         <div className="mt-8">
                             <h3 className="text-2xl font-semibold mb-4">Comments / Feedback</h3>
                             <div className="">{comments.length > 0 ? (

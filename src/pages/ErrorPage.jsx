@@ -13,7 +13,7 @@ const ErrorPage = () => {
                     backgroundImage: `url(${errorImg})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    WebkitBackgroundClip: 'text', // Safari support
+                    WebkitBackgroundClip: 'text', 
                 }}
             >
                 Oops!

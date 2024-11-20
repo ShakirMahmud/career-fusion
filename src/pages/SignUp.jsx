@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
-import Swal from 'sweetalert2'; // Import SweetAlert2
+import Swal from 'sweetalert2';
 import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
@@ -23,7 +23,6 @@ const SignUp = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-        // Password validation
         const hasUppercase = /[A-Z]/.test(password);
         const hasLowercase = /[a-z]/.test(password);
         const isValidLength = password.length >= 6;
@@ -41,24 +40,21 @@ const SignUp = () => {
             return;
         }
 
-        // Proceed with creating the user
         createNewUser(email, password)
             .then(res => {
                 setUser(res.user);
                 console.log(res.user);
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        // Show success alert
                         Swal.fire({
                             title: 'Sign-Up Successful!',
                             text: 'You have successfully signed up. You will be redirected shortly, or click OK to proceed immediately.',
                             icon: 'success',
                             confirmButtonText: 'OK',
-                            timer: 3000, // 3-second timer
-                            timerProgressBar: true, // Shows a progress bar for the timer
+                            timer: 3000, 
+                            timerProgressBar: true, 
                         }).then((result) => {
                             if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                                // Redirect when OK is clicked or timer runs out
                                 navigate('/');
                             }
                         });
@@ -82,11 +78,10 @@ const SignUp = () => {
                     text: 'You have successfully signed up. You will be redirected shortly, or click OK to proceed immediately.',
                     icon: 'success',
                     confirmButtonText: 'OK',
-                    timer: 3000, // 3-second timer
-                    timerProgressBar: true, // Shows a progress bar for the timer
+                    timer: 3000,
+                    timerProgressBar: true, 
                 }).then((result) => {
                     if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                        // Redirect when OK is clicked or timer runs out
                         navigate('/');
                     }
                 });
@@ -132,7 +127,6 @@ const SignUp = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
-                    {/* Error Message */}
                     {error && <p className="text-red-600 text-center mt-2">{error}</p>}
                     <div className="form-control mt-6">
                         <button type='submit' className="btn btn-primary bg-btn_bg rounded-xl text-white">Sign Up</button>
@@ -147,7 +141,7 @@ const SignUp = () => {
                         onClick={handleSignUpWithGoogle}
                         className="flex items-center gap-2 px-6 py-3 bg-white text-gray-600 rounded-lg shadow hover:shadow-md transition-all duration-300 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                        <FcGoogle size={24} /> {/* Google Icon */}
+                        <FcGoogle size={24} /> 
                         <span className="text-lg font-medium">Sign Up with Google</span>
                     </button>
                 </div>

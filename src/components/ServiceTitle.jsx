@@ -1,11 +1,10 @@
 import React from 'react';
-import career_gif from '../assets/Career-Counselling.gif'; // Import the GIF
-import { FaUserGraduate, FaUsers, FaChalkboardTeacher } from 'react-icons/fa'; // Icons for the stats
+import career_gif from '../assets/Career-Counselling.gif'; 
+import { FaUserGraduate, FaUsers, FaChalkboardTeacher } from 'react-icons/fa'; 
 
 const ServiceTitle = () => {
     return (
         <div className="relative rounded-xl bg-card_bg my-12 p-4 flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Left Section */}
             <div className="w-full lg:w-1/2 order-1 lg:order-none lg:translate-y-[20%]">
                 <h1 className="text-4xl font-bold text-btn_bg mb-4 leading-tight">
                     Explore Our Career Counseling Services
@@ -19,11 +18,9 @@ const ServiceTitle = () => {
                 <button className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700">
                     Get Started
                 </button>
-                {/* Card Section */}
                 <div className="w-full lg:w-auto mt-6 lg:mt-0 lg:translate-x-[50%] lg:-translate-y-[40%] bg-white shadow-lg rounded-xl p-4 border border-gray-200 order-2 lg:order-none">
                     <h3 className="text-xl font-bold text-gray-800">Our Achievements</h3>
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {/* Successful Sessions */}
                         <div className="stat text-center">
                             <div className="text-xl text-primary">
                                 <FaChalkboardTeacher className="inline-block h-5 w-5 text-primary" />
@@ -33,7 +30,6 @@ const ServiceTitle = () => {
                             <div className="stat-desc">100% client satisfaction</div>
                         </div>
 
-                        {/* Clients Assisted */}
                         <div className="stat text-center">
                             <div className="text-secondary">
                                 <FaUsers className="inline-block h-5 w-5 text-secondary" />
@@ -43,7 +39,6 @@ const ServiceTitle = () => {
                             <div className="stat-desc">Helping professionals grow</div>
                         </div>
 
-                        {/* Counselors Available */}
                         <div className="stat text-center">
                             <div className="text-secondary">
                                 <FaUserGraduate className="inline-block h-5 w-5 text-secondary" />
@@ -56,9 +51,6 @@ const ServiceTitle = () => {
                 </div>
             </div>
 
-
-
-            {/* Right Section */}
             <div className="w-full lg:w-1/2 order-3 lg:order-none">
                 <div className="w-full bg-gray-300 rounded-md overflow-hidden">
                     <img

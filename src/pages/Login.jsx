@@ -26,20 +26,16 @@ const Login = () => {
                     text: 'You have successfully logged in. You will be redirected shortly, or click OK to proceed immediately.',
                     icon: 'success',
                     confirmButtonText: 'OK',
-                    timer: 3000, // 3-second timer
-                    timerProgressBar: true, // Shows a progress bar for the timer
+                    timer: 3000, 
+                    timerProgressBar: true, 
                 }).then((result) => {
                     if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                        // Redirect when OK is clicked or timer runs out
                         navigate(location?.state ? location.state : '/');
                     }
                 });
             })
             .catch((err) => {
-                // Handle errors and display the relevant error message
                 let errorMessage = 'Wrong Email or Password!!!';
-
-                // Show error alert using SweetAlert2
                 Swal.fire({
                     title: 'Login Failed!',
                     text: errorMessage,
@@ -104,7 +100,7 @@ const Login = () => {
                         onClick={handleSignInWithGoogle}
                         className="flex items-center gap-2 px-6 py-3 bg-white text-gray-600 rounded-lg shadow hover:shadow-md transition-all duration-300 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                        <FcGoogle size={24} /> {/* Google Icon */}
+                        <FcGoogle size={24} /> 
                         <span className="text-lg font-medium">Log In with Google</span>
                     </button>
                 </div>

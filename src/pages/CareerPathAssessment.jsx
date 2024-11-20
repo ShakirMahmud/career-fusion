@@ -28,18 +28,15 @@ const CareerPathAssessment = () => {
   };
 
   const handleBack = () => {
-    setShowResults(false); // Reset to show questions again
+    setShowResults(false); 
   };
 
   const getCareerSuggestions = () => {
-    // Ensure all questions are answered
     if (Object.keys(answers).length !== questions.length) {
       return "Please answer all the questions to get personalized career suggestions.";
     }
 
     const suggestions = [];
-
-    // Match answers to relevant services (Refined logic here)
     if (answers[0] === "Remote") {
       if (answers[1] === "Technical Expertise") {
         suggestions.push("Resume Review", "Mock Group Interviews", "Digital Marketing Fundamentals");
@@ -81,8 +78,7 @@ const CareerPathAssessment = () => {
         suggestions.push("Personal Branding", "Public Speaking Workshop", "Digital Marketing Fundamentals");
       }
     }
-
-    // Fallback if no matches
+    
     if (suggestions.length === 0) {
       suggestions.push("Career Counseling Sessions", "Networking Strategies");
     }

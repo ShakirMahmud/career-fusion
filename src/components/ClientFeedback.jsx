@@ -8,15 +8,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const ClientFeedback = () => {
     const {clientFeedbackRef} =useContext(AuthContext);
-  // Larger list of feedbacks
   const feedbacks = [
-    
-
-
-
-
-
-
     {
       feedback: "MotivaKit has transformed my career journey! Their guidance was top-notch, and I finally landed my dream job.",
       name: "Mark T.",
@@ -73,9 +65,6 @@ const ClientFeedback = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
@@ -83,12 +72,10 @@ const ClientFeedback = () => {
         {feedbacks.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col md:flex-row items-center md:items-start justify-center mx-auto max-w-5xl px-6 text-gray-700">
-              {/* Placeholder image */}
               <div className=" rounded-full mr-3 bg-blue-100 flex-shrink-0 flex items-center justify-center ">
                 <img className='w-28 h-28 rounded-full object-cover' src={item.image} alt="" />
                 
               </div>
-              {/* Feedback Content */}
               <div className="text-center md:text-left">
                 <p className="italic text-lg leading-relaxed">
                   "{item.feedback}"

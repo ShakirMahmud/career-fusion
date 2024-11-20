@@ -1,12 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Ensure to import navigate if not already
+import { useNavigate } from 'react-router-dom'; 
 
 const Footer = () => {
-    const navigate = useNavigate(); // Hook to enable navigation
-
+    const navigate = useNavigate(); 
     return (
         <footer className="footer footer-center bg-base-100 text-base-content rounded p-10">
-            {/* Logo Section */}
             <div
                 onClick={() => navigate('/')}
                 className="flex items-center gap-2 cursor-pointer lg:mb-8">
@@ -23,9 +21,7 @@ const Footer = () => {
                 </span>
             </div>
 
-            {/* Main Links */}
             <div className="grid lg:grid-cols-3 gap-8">
-                {/* Useful Links */}
                 <div>
                     <h2 className="text-lg font-bold mb-4">Useful Links</h2>
                     <ul className="list-none space-y-2">
@@ -39,7 +35,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Our Services */}
                 <div>
                     <h2 className="text-lg font-bold mb-4">Our Services</h2>
                     <ul className="list-none space-y-2">
@@ -52,7 +47,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact Details */}
                 <div>
                     <h2 className="text-lg font-bold mb-4">Contact Details</h2>
                     <ul className="list-none space-y-2">
@@ -66,7 +60,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Social Media Links */}
             <div className="mt-8">
                 <div className="grid grid-flow-col gap-4">
                     <a href="#">
@@ -105,7 +98,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Copyright Section */}
             <aside className="mt-4">
                 <p>
                     Copyright © {new Date().getFullYear()} - All right reserved by CareerFusion.

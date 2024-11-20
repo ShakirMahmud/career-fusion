@@ -4,15 +4,12 @@ import { Link } from 'react-router-dom';
 
 const ServiceCards = ({ service }) => {
   const { image, serviceName, category, description, price, duration, counselor, rating } = service;
-
-  // Ensure category is treated correctly if it's not an array
   const categoryDisplay = Array.isArray(category) ? category.join(', ') : category;
 
   return (
     <div
       className="flex flex-col bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-blue-500 transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeIn h-full"
     >
-      {/* Image Section */}
       <div className="overflow-hidden rounded-md h-48">
         <img
           src={image}
@@ -21,7 +18,6 @@ const ServiceCards = ({ service }) => {
         />
       </div>
 
-      {/* Service Info */}
       <div className="mt-4 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-blue-700">{serviceName}</h3>
         <p className="text-sm text-gray-500 italic">
@@ -36,13 +32,11 @@ const ServiceCards = ({ service }) => {
         <div className="flex-grow"></div>
       </div>
 
-      {/* Price and Counselor */}
       <div className="mt-4 flex justify-between items-center">
         <p className="text-lg font-semibold text-green-600">{price}</p>
         <p className="text-sm text-gray-500">By: <span className="font-medium text-blue-600">{counselor}</span></p>
       </div>
 
-      {/* Duration and Rating */}
       <div className="mt-2 flex justify-between items-center">
         <p className="text-sm text-gray-500">{duration}</p>
         <p className="flex items-center text-yellow-500">
@@ -50,7 +44,6 @@ const ServiceCards = ({ service }) => {
         </p>
       </div>
 
-      {/* Learn More Button */}
       <div className="mt-6">
         <Link to={`/service/${serviceName}`} className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors w-full text-center block">
           Learn More

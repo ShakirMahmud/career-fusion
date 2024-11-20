@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../provider/AuthProvider';
 import { auth } from '../firebase/firebase.config';
-import Swal from 'sweetalert2'; // Import SweetAlert2
+import Swal from 'sweetalert2'; 
 
 const ForgetPassword = () => {
     const { user, logOut } = useContext(AuthContext);
-    const navigate = useNavigate(); // For navigation after logout
+    const navigate = useNavigate(); 
 
     const handlePasswordReset = async (e) => {
         e.preventDefault();
@@ -16,26 +16,23 @@ const ForgetPassword = () => {
         const email = form.get('email');
 
         try {
-            // Send password reset email
             await sendPasswordResetEmail(auth, email);
-            
-            // Show success alert
+
             Swal.fire({
                 title: 'Password Reset Email Sent!',
                 text: 'You will be redirected shortly, or click OK to proceed immediately.',
                 icon: 'success',
                 confirmButtonText: 'OK',
-                timer: 3000, // Auto close after 3 seconds
-                timerProgressBar: true, // Shows a progress bar for the timer
+                timer: 3000, 
+                timerProgressBar: true, 
             }).then((result) => {
                 if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-                    window.open('https://mail.google.com/mail/u/0/#inbox', '_blank'); // Open Gmail
-                    logOut(); // Log out the user
-                    navigate('/auth/login'); // Redirect to login page
+                    window.open('https://mail.google.com/mail/u/0/#inbox', '_blank'); 
+                    logOut(); 
+                    navigate('/auth/login'); 
                 }
             });
         } catch (error) {
-            // Show error alert
             Swal.fire({
                 title: 'Error!',
                 text: error.message || 'Failed to send password reset email.',
