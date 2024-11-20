@@ -51,7 +51,7 @@ const ServiceDetails = () => {
                                     : 'hover:border-transparent group'
                                     } bg-white shadow-md transition-all duration-300`}
                             >
-                                <div className="overflow-hidden rounded-md h-24 lg:h-48">
+                                <div className="overflow-hidden rounded-md w-auto h-24 lg:h-48">
                                     <img
                                         src={service.image}
                                         alt={service.serviceName}
@@ -76,7 +76,7 @@ const ServiceDetails = () => {
                         <img
                             src={selectedService.image}
                             alt={selectedService.serviceName}
-                            className="mt-4 w-full h-96 object-cover rounded-lg"
+                            className="mt-4 w-auto lg:w-full h-96 object-cover rounded-lg"
                         />
                         <p className="text-lg mt-4">{selectedService.description}</p>
 
@@ -141,12 +141,12 @@ const ServiceDetails = () => {
                                 <p className="text-gray-500">No comments yet. Be the first to comment!</p>
                             )}
                             </div>
-                            <div className="flex items-center gap-4 mt-4">
+                            <div className="flex flex-col lg:flex-row items-center gap-4 mt-4">
                                 <input
                                     type="text"
                                     value={newComment}
                                     onChange={(e) => setNewComment(e.target.value)}
-                                    className="flex-grow border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="flex-grow border border-gray-300 rounded-lg px-4 py-2 focus:outline-none w-full lg:w-auto focus:ring-2 focus:ring-blue-500"
                                     placeholder="Write your comment here..."
                                 />
                                 <button
@@ -159,7 +159,7 @@ const ServiceDetails = () => {
 
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-6 flex justify-center">
                             <button onClick={() => navigate('/')} className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors">
                                 Back to Home
                             </button>

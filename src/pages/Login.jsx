@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(true);
@@ -91,7 +92,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button type='submit' className="btn btn-primary">Login</button>
+                        <button type='submit' className="btn btn-primary bg-btn_bg rounded-xl text-white">Login</button>
                     </div>
                 </form>
                 <div className="text-center mt-6">
@@ -99,7 +100,13 @@ const Login = () => {
                     <Link to='/auth/signUp' className="link link-hover">Sign Up</Link>
                 </div>
                 <div className="w-full flex justify-center py-6">
-                    <button onClick={handleSignInWithGoogle} className="btn btn-ghost bg-base-300 rounded-lg text-lg">Log In with Google</button>
+                    <button
+                        onClick={handleSignInWithGoogle}
+                        className="flex items-center gap-2 px-6 py-3 bg-white text-gray-600 rounded-lg shadow hover:shadow-md transition-all duration-300 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    >
+                        <FcGoogle size={24} /> {/* Google Icon */}
+                        <span className="text-lg font-medium">Log In with Google</span>
+                    </button>
                 </div>
             </div>
         </div>

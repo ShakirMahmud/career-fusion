@@ -10,40 +10,54 @@ const ClientFeedback = () => {
     const {clientFeedbackRef} =useContext(AuthContext);
   // Larger list of feedbacks
   const feedbacks = [
+    
+
+
+
+
+
+
     {
       feedback: "MotivaKit has transformed my career journey! Their guidance was top-notch, and I finally landed my dream job.",
       name: "Mark T.",
       location: "Andung",
+      image: 'https://i.ibb.co.com/Tv2HsyK/Mark-T.jpg'
     },
     {
       feedback: "The advice I received was spot on. The clarity I got has helped me immensely in achieving my goals.",
       name: "Sophia L.",
       location: "Boston",
+      image: 'https://i.ibb.co.com/hXH8NTV/Sophia-L.jpg'
     },
     {
       feedback: "I was confused about my career options, but their sessions provided clarity and actionable steps forward.",
       name: "James K.",
       location: "San Francisco",
+      image: 'https://i.ibb.co.com/TTyWb7W/James-K.jpg'
     },
     {
       feedback: "They helped me identify my strengths and passions, which gave me the confidence to make big career moves.",
       name: "Emily R.",
       location: "London",
+      image: 'https://i.ibb.co.com/PYb5Ryv/Emily-R.jpg'
     },
     {
       feedback: "The personalized career advice I received was invaluable. MotivaKit has truly changed my perspective!",
       name: "John P.",
       location: "New York",
+      image: 'https://i.ibb.co.com/MsPyrZ9/John-P.jpg'
     },
     {
       feedback: "Excellent support and expertise! I highly recommend them to anyone looking for career guidance.",
       name: "Sarah W.",
       location: "Melbourne",
+      image: 'https://i.ibb.co.com/6yn8wKC/Sarah-W.jpg'
     },
     {
       feedback: "I’m now thriving in my field, thanks to MotivaKit’s structured and insightful approach.",
       name: "David L.",
       location: "Toronto",
+      image: 'https://i.ibb.co.com/gydL2Q6/David-L.jpg'
     },
   ];
 
@@ -70,8 +84,9 @@ const ClientFeedback = () => {
           <SwiperSlide key={index}>
             <div className="flex flex-col md:flex-row items-center md:items-start justify-center mx-auto max-w-5xl px-6 text-gray-700">
               {/* Placeholder image */}
-              <div className="w-28 h-28 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-2xl font-semibold text-blue-500 md:mr-6 mb-6 md:mb-0">
-                {item.name.charAt(0)}
+              <div className=" rounded-full mr-3 bg-blue-100 flex-shrink-0 flex items-center justify-center ">
+                <img className='w-28 h-28 rounded-full object-cover' src={item.image} alt="" />
+                
               </div>
               {/* Feedback Content */}
               <div className="text-center md:text-left">

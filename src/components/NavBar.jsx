@@ -50,7 +50,7 @@ const NavBar = () => {
                         >
                             <path d="M12 2L20 20H4L12 2Z" />
                         </svg>
-                        <span className="text-cyan-400 font-semibold text-3xl tracking-wide">
+                        <span className="text-cyan-400 font-semibold text-2xl lg:text-3xl tracking-wide">
                             <span className='text-4xl'>C</span>areer<span className='text-4xl'>F</span>usion
                         </span>
                     </div>
