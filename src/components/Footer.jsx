@@ -21,10 +21,10 @@ const Footer = () => {
                 </span>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
                 <div>
-                    <h2 className="text-lg font-bold mb-4">Useful Links</h2>
-                    <ul className="list-none space-y-2">
+                    <h2 className="text-lg font-bold mb-4 lg:text-start">Useful Links</h2>
+                    <ul className="list-none space-y-2 lg:text-left">
                         <li className="link link-hover">Home</li>
                         <li className="link link-hover">About Us</li>
                         <li className="link link-hover">Our Services</li>
@@ -36,8 +36,8 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-bold mb-4">Our Services</h2>
-                    <ul className="list-none space-y-2">
+                    <h2 className="text-lg font-bold mb-4 lg:text-start">Our Services</h2>
+                    <ul className="list-none space-y-2 lg:text-left">
                         <li className="link link-hover">Career Counseling Experts</li>
                         <li className="link link-hover">Resume Writing Services</li>
                         <li className="link link-hover">Leadership Development</li>
@@ -48,11 +48,10 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-bold mb-4">Contact Details</h2>
-                    <ul className="list-none space-y-2">
+                    <h2 className="text-lg font-bold mb-4 lg:text-start">Contact Details</h2>
+                    <ul className="list-none space-y-2 lg:text-left">
                         <li>
                             <span className="block">Dhaka, Bangladesh</span>
-                            
                         </li>
                         <li>Email: <a href="mailto:shakirmahmud50@gmail.com" className="link link-hover">shakirmahmud50@gmail.com</a></li>
                         <li>Phone: <a href="" className="link link-hover">+880-1222222222</a></li>
