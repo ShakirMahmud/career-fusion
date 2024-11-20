@@ -65,7 +65,7 @@ const ForgetPassword = () => {
                             />
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary  bg-btn_bg rounded-xl text-white">
                                 Reset Password
                             </button>
                         </div>
