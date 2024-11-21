@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Footer = () => {
     const navigate = useNavigate(); 
     return (
-        <footer className="footer footer-center bg-base-100 text-base-content rounded p-10">
+        <footer className="footer footer-center   bg-nav  text-white rounded p-10">
             <div
                 onClick={() => navigate('/')}
                 className="flex items-center gap-2 cursor-pointer lg:mb-8">

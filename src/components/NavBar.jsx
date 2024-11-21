@@ -58,7 +58,7 @@ const NavBar = () => {
                     <ul className='lg:flex justify-center lg:w-full gap-4 hidden'>
                         <NavLink to='/'>Home</NavLink>
                         {user && <NavLink to='/auth/myProfile'>My Profile</NavLink>}
-                        <NavLink to='/careerPathAssessment'>CareerPathAssessment</NavLink>
+                        <NavLink to='/careerPathAssessment'>Career Path Assessment</NavLink>
                         <button onClick={handleNavigateToWhyChooseUs}>Why Choose Us</button>
                         <button onClick={handleNavigateToClientFeedback}>Client Feedback</button>
                     </ul>
@@ -74,7 +74,7 @@ const NavBar = () => {
                             <ul className='absolute bg-nav_bg text-white shadow-md rounded-md w-auto mt-2 right-0 text-lg font-medium'>
                                 <li><NavLink to='/' className='block p-2'>Home</NavLink></li>
                                 {user && <li><NavLink to='/auth/myProfile' className='block p-2'>My Profile</NavLink></li>}
-                                <li><NavLink to='/careerPathAssessment' className='block p-2'>CareerPathAssessment</NavLink></li>
+                                <li><NavLink to='/careerPathAssessment' className='block p-2'>Career Path Assessment</NavLink></li>
                                 <li><button onClick={handleNavigateToWhyChooseUs} className='block p-2'>Why Choose Us</button></li>
                                 <li><button onClick={handleNavigateToClientFeedback} className='block p-2'>Client Feedback</button></li>
                             </ul>

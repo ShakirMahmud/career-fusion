@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import ServiceCards from '../components/ServiceCards';
 import { useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Footer from '../components/Footer';
 
 const CareerPathAssessment = () => {
   const [answers, setAnswers] = useState({});
@@ -168,6 +169,7 @@ const CareerPathAssessment = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </div>
   );
 };

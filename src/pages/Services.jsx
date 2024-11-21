@@ -30,16 +30,12 @@ const Services = () => {
   };
 
   const handleTimeOfDayChange = (value) => {
-    setFilters((prev) => {
-      const updatedTimes = prev.timeOfDay.includes(value)
-        ? prev.timeOfDay.filter((time) => time !== value)
-        : [...prev.timeOfDay, value];
-      return {
-        ...prev,
-        timeOfDay: updatedTimes,
-      };
-    });
+    setFilters((prev) => ({
+      ...prev,
+      timeOfDay: prev.timeOfDay[0] === value ? [] : [value], 
+    }));
   };
+  
 
   const handleValueChange = (type, value) => {
     setFilters((prev) => ({
@@ -119,7 +115,7 @@ const Services = () => {
                 {["Morning", "Afternoon", "Evening"].map((time) => (
                   <label key={time} className="block">
                     <input
-                      type="checkbox"
+                      type="radio"
                       checked={filters.timeOfDay.includes(time)}
                       onChange={() => handleTimeOfDayChange(time)}
                     />

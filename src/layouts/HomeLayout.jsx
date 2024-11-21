@@ -41,8 +41,8 @@ const HomeLayout = () => {
                     <ClientFeedback/>
                 </section>
             </main>
-            <footer>
-                <Footer />
+            <footer >
+                <Footer/>
             </footer>
         </div>
     );
