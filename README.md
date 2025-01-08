@@ -78,4 +78,6 @@ Career Fusion is a modern career counseling website designed to help users make 
 
 ---
 
+## [Installation Guide](https://docs.google.com/document/d/1jGC2TAjMNN5dh-RQoc1NNIznNOT_ocnTIWKx7_Xn9Xg/edit?usp=sharing)
+
 Happy browsing!  

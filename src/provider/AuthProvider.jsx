@@ -11,30 +11,36 @@ const AuthProvider = ({children}) => {
     const whyChooseUsRef = useRef(null);
     const clientFeedbackRef = useRef(null);
 
+    //create user
     const createNewUser = (email, password) =>{
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    //login
     const userLogin = (email, password) =>{
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+    //google sign in
     const signInWithGoogle =()=>{
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
+    //logout
     const logOut =()=>{
         setLoading(true);
         return signOut(auth);
     }
 
+    //update profile
     const updateUserProfile = updatedData =>{
         return updateProfile(auth.currentUser, updatedData);
     }
 
+    //auth info
     const authInfo ={
         user,
         setUser,
@@ -49,6 +55,7 @@ const AuthProvider = ({children}) => {
         whyChooseUsRef,
     }
 
+    //observer
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
